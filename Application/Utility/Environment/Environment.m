@@ -37,4 +37,8 @@ static Environment *sharedInstance = nil;
   return self.config[@"pixateLicenseUser"];
 }
 
+-(NSString*)facebookAppID {
+  return self.config[@"facebookAppID"];
+}
+
 @end

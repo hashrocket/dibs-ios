@@ -1,9 +1,11 @@
 #import "LaunchController.h"
+#import "AppDelegate.h"
 
 @interface LaunchController () {
   UIButton *_connectButton;
 }
 -(UIButton*)connectButton;
+-(void)didTapConnect:(id)sender;
 @end
 
 @implementation LaunchController
@@ -21,7 +23,10 @@
     _connectButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_connectButton setBackgroundColor:[UIColor blueColor]];
     [_connectButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [_connectButton setTitle:NSLocalizedString(@"button.connect", nil) forState:UIControlStateNormal];
+    [_connectButton addTarget:self action:@selector(didTapConnect:)
+             forControlEvents:UIControlEventTouchUpInside];
+    [_connectButton setTitle:NSLocalizedString(@"button.connect", nil)
+                    forState:UIControlStateNormal];
   }
   return _connectButton;
 }
@@ -30,6 +35,11 @@
   [super updateViewConstraints];
   [self.view addEqualityConstraintOn:NSLayoutAttributeCenterX forSubview:self.connectButton];
   [self.view addEqualityConstraintOn:NSLayoutAttributeCenterY forSubview:self.connectButton];
+}
+
+-(void)didTapConnect:(id)sender {
+  AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+  [delegate openSessionWithAllowLoginUI:YES];
 }
 
 @end

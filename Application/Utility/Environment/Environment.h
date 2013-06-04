@@ -6,5 +6,6 @@
 
 -(NSString*)pixateLicenseKey;
 -(NSString*)pixateLicenseUser;
+-(NSString*)facebookAppID;
 
 @end

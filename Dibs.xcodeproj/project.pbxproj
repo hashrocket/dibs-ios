@@ -51,6 +51,7 @@
 		D7C4C2F4175E560F007B65F7 /* Environment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Environment.m; sourceTree = "<group>"; };
 		D7C4C2F6175E59E6007B65F7 /* Environments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environments.plist; sourceTree = "<group>"; };
 		D7C4C2F9175E5B78007B65F7 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; };
+		D7C4C2FD175E607E007B65F7 /* NotificationKonstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationKonstants.h; sourceTree = "<group>"; };
 		DEF3DA454DF944E59ED06C27 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -204,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C4C2F6175E59E6007B65F7 /* Environments.plist */,
+				D7C4C2FD175E607E007B65F7 /* NotificationKonstants.h */,
 				D7C4C2DA175E18EA007B65F7 /* Targets */,
 			);
 			path = Support;

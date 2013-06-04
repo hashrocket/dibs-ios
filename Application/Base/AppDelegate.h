@@ -4,4 +4,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+-(BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
+
 @end
