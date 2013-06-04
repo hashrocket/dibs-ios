@@ -15,3 +15,52 @@
 #import <PXEngine/PXEngine.h>
 #import "UIView+Constraints.h"
 #import "Environment.h"
+
+static void postNotification(NSString *notificationName) {
+  [[NSNotificationCenter defaultCenter] postNotificationName:notificationName
+                                                      object:nil];
+}
+
+static void postNotificationObject(NSString *notificationName, id object) {
+  [[NSNotificationCenter defaultCenter] postNotificationName:notificationName
+                                                      object:object];
+}
+
+static void simpleAlert(NSString *title, NSString *message) {
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil
+                                        cancelButtonTitle:@"OK" otherButtonTitles:nil];
+  [alert show];
+}
+
+#pragma mark - debug macros
+
+#define log_frame(view) \
+NSLog(@"frame: ({x: %f, y: %f} {w: %f, h: %f})", \
+view.frame.origin.x,view.frame.origin.y, \
+view.frame.size.width,view.frame.size.height)
+
+#define log_bounds(view) \
+NSLog(@"bounds: ({x: %f, y: %f} {w: %f, h: %f})", \
+view.bounds.origin.x,view.bounds.origin.y, \
+view.bounds.size.width,view.bounds.size.height)
+
+#define log_size(size) \
+NSLog(@"size: ({w: %f, h: %f})", size.width,size.height)
+
+static void log_point(CGPoint point) {
+  NSLog(@"point: ({x: %f, y: %f})", point.x, point.y);
+}
+
+#define log_rect(rect) \
+NSLog(@"rect: ({x: %f, y: %f} {w: %f, h: %f})", \
+rect.origin.x,rect.origin.y, rect.size.width,rect.size.height)
+
+#define log_object(object) \
+NSLog(@"%@: %@", [object class], object);
+
+#define log_float(float) \
+NSLog(@"float: %f", float);
+
+#define stroke_view(view) \
+[view.layer setBorderColor:[[UIColor redColor] CGColor]]; \
+[view.layer setBorderWidth:1]
