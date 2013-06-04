@@ -1,10 +1,11 @@
 #import <UIKit/UIKit.h>
-
+#import "Environment.h"
 #import "AppDelegate.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
   @autoreleasepool {
-      return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    [PXEngine licenseKey:[[Environment sharedInstance] pixateLicenseKey]
+                 forUser:[[Environment sharedInstance] pixateLicenseUser]];
+    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
   }
 }
