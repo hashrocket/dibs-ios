@@ -14,3 +14,4 @@ profile
 *.moved-aside
 DerivedData
 .sass-cache
+Environments.plist
