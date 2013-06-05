@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		999FF7ECA217448D8DC3FD0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF3DA454DF944E59ED06C27 /* libPods.a */; };
 		D755E95D175F886400A23FDE /* UserDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D755E95C175F886400A23FDE /* UserDataStore.m */; };
+		D755E961175FA6CA00A23FDE /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D755E960175FA6CA00A23FDE /* TabBarController.m */; };
 		D7C4C2A4175E15DE007B65F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C4C2A3175E15DE007B65F7 /* UIKit.framework */; };
 		D7C4C2A6175E15DE007B65F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C4C2A5175E15DE007B65F7 /* Foundation.framework */; };
 		D7C4C2A8175E15DE007B65F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C4C2A7175E15DE007B65F7 /* CoreGraphics.framework */; };
@@ -31,6 +32,8 @@
 		78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		D755E95B175F886400A23FDE /* UserDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataStore.h; sourceTree = "<group>"; };
 		D755E95C175F886400A23FDE /* UserDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataStore.m; sourceTree = "<group>"; };
+		D755E95F175FA6CA00A23FDE /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		D755E960175FA6CA00A23FDE /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		D7C4C2A0175E15DE007B65F7 /* Dibs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C4C2A3175E15DE007B65F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7C4C2A5175E15DE007B65F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,6 +84,15 @@
 				D755E95C175F886400A23FDE /* UserDataStore.m */,
 			);
 			path = UserDataStore;
+			sourceTree = "<group>";
+		};
+		D755E95E175FA67600A23FDE /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D755E95F175FA6CA00A23FDE /* TabBarController.h */,
+				D755E960175FA6CA00A23FDE /* TabBarController.m */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		D7C4C297175E15DE007B65F7 = {
@@ -142,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C4C2E2175E2EB2007B65F7 /* Launch */,
+				D755E95E175FA67600A23FDE /* TabBar */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -383,6 +396,7 @@
 				D7C4C2E7175E31CD007B65F7 /* UIView+Constraints.m in Sources */,
 				D7C4C2F5175E560F007B65F7 /* Environment.m in Sources */,
 				D755E95D175F886400A23FDE /* UserDataStore.m in Sources */,
+				D755E961175FA6CA00A23FDE /* TabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

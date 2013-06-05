@@ -18,11 +18,8 @@
   switch (state) {
     case FBSessionStateOpen:
       if (!error) {
-        // We have a valid session
-        // need to send this to the server and get back the oauthtoken that we store
-        // to make requests on their behalf
-        log_object([session.accessTokenData accessToken]);
-        log_object([session.accessTokenData expirationDate]);
+        [[UserDataStore sharedInstance] setToken:[session.accessTokenData accessToken]
+                                      withExpiry:[session.accessTokenData expirationDate]];
       }
       break;
     case FBSessionStateClosed:
