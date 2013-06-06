@@ -1,3 +1,6 @@
 button {
   background-color: #325d9a;
 }
+button:selected {
+  background-color: #5190d8;
+}

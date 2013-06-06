@@ -88,7 +88,6 @@
 }
 
 -(void)sessionStateDidChange:(NSNotification *)notification {
-  log_object(notification);
   if ([[UserDataStore sharedInstance] isAuthenticated]) {
     [self transitionToTabBarController];
   }

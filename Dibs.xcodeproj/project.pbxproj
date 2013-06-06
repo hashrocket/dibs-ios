@@ -26,6 +26,8 @@
 		D7C4C2F5175E560F007B65F7 /* Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C4C2F4175E560F007B65F7 /* Environment.m */; };
 		D7C4C2F7175E59E6007B65F7 /* Environments.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7C4C2F6175E59E6007B65F7 /* Environments.plist */; };
 		D7C4C2FA175E5B78007B65F7 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = D7C4C2F9175E5B78007B65F7 /* default.css */; };
+		D7CDA6E4175FC6EA000D280A /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CDA6E3175FC6EA000D280A /* TabView.m */; };
+		D7CDA6E81760C52D000D280A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CDA6E71760C52D000D280A /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,10 @@
 		D7C4C2F6175E59E6007B65F7 /* Environments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environments.plist; sourceTree = "<group>"; };
 		D7C4C2F9175E5B78007B65F7 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; };
 		D7C4C2FD175E607E007B65F7 /* NotificationKonstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationKonstants.h; sourceTree = "<group>"; };
+		D7CDA6E2175FC6EA000D280A /* TabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabView.h; sourceTree = "<group>"; };
+		D7CDA6E3175FC6EA000D280A /* TabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
+		D7CDA6E6175FC7C7000D280A /* TabViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewDelegate.h; sourceTree = "<group>"; };
+		D7CDA6E71760C52D000D280A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DEF3DA454DF944E59ED06C27 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CDA6E81760C52D000D280A /* QuartzCore.framework in Frameworks */,
 				D7C4C2A4175E15DE007B65F7 /* UIKit.framework in Frameworks */,
 				D7C4C2A6175E15DE007B65F7 /* Foundation.framework in Frameworks */,
 				D7C4C2A8175E15DE007B65F7 /* CoreGraphics.framework in Frameworks */,
@@ -118,6 +125,7 @@
 		D7C4C2A2175E15DE007B65F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7CDA6E71760C52D000D280A /* QuartzCore.framework */,
 				D7C4C2EF175E544E007B65F7 /* PXEngine.framework */,
 				D7C4C2A3175E15DE007B65F7 /* UIKit.framework */,
 				D7C4C2A5175E15DE007B65F7 /* Foundation.framework */,
@@ -171,6 +179,7 @@
 			children = (
 				D7C4C2F1175E5550007B65F7 /* Categories */,
 				D7C4C2F2175E560F007B65F7 /* Environment */,
+				D7CDA6E5175FC7C7000D280A /* Protocols */,
 				D755E95A175F886400A23FDE /* UserDataStore */,
 			);
 			path = Utility;
@@ -179,6 +188,7 @@
 		D7C4C2C8175E184C007B65F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D7CDA6E1175FC6EA000D280A /* TabView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +299,23 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		D7CDA6E1175FC6EA000D280A /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				D7CDA6E2175FC6EA000D280A /* TabView.h */,
+				D7CDA6E3175FC6EA000D280A /* TabView.m */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		D7CDA6E5175FC7C7000D280A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D7CDA6E6175FC7C7000D280A /* TabViewDelegate.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -397,6 +424,7 @@
 				D7C4C2F5175E560F007B65F7 /* Environment.m in Sources */,
 				D755E95D175F886400A23FDE /* UserDataStore.m in Sources */,
 				D755E961175FA6CA00A23FDE /* TabBarController.m in Sources */,
+				D7CDA6E4175FC6EA000D280A /* TabView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

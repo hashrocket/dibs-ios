@@ -7,6 +7,7 @@
 #ifdef __OBJC__
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
+  #import <QuartzCore/QuartzCore.h>
 #endif
 
 #import <FacebookSDK/FacebookSDK.h>
@@ -17,6 +18,15 @@
 #import "Environment.h"
 #import "UserDataStore.h"
 #import "NotificationKonstants.h"
+
+static NSString* strf(NSString *format, ...) {
+  NSString *contents;
+  va_list args;
+  va_start(args, format);
+  contents = [[NSString alloc] initWithFormat:format arguments:args];
+  va_end(args);
+  return contents;
+}
 
 static void postNotification(NSString *notificationName) {
   [[NSNotificationCenter defaultCenter] postNotificationName:notificationName
