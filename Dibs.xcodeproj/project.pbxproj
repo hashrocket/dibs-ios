@@ -28,6 +28,7 @@
 		D7C4C2FA175E5B78007B65F7 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = D7C4C2F9175E5B78007B65F7 /* default.css */; };
 		D7CDA6E4175FC6EA000D280A /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CDA6E3175FC6EA000D280A /* TabView.m */; };
 		D7CDA6E81760C52D000D280A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CDA6E71760C52D000D280A /* QuartzCore.framework */; };
+		D7CDA6F5176222EA000D280A /* LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CDA6F4176222EA000D280A /* LaunchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		D7CDA6E3175FC6EA000D280A /* TabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
 		D7CDA6E6175FC7C7000D280A /* TabViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewDelegate.h; sourceTree = "<group>"; };
 		D7CDA6E71760C52D000D280A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D7CDA6F3176222EA000D280A /* LaunchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchView.h; sourceTree = "<group>"; };
+		D7CDA6F4176222EA000D280A /* LaunchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchView.m; sourceTree = "<group>"; };
 		DEF3DA454DF944E59ED06C27 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -188,6 +191,7 @@
 		D7C4C2C8175E184C007B65F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D7CDA6F2176222B9000D280A /* Launch */,
 				D7CDA6E1175FC6EA000D280A /* TabView */,
 			);
 			path = Views;
@@ -196,6 +200,7 @@
 		D7C4C2C9175E184C007B65F7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D7CDA6E9176221EC000D280A /* Launch */,
 				D7C4C2CA175E184C007B65F7 /* App */,
 				D7C4C2D0175E184C007B65F7 /* Localizations */,
 			);
@@ -316,6 +321,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		D7CDA6F2176222B9000D280A /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				D7CDA6F3176222EA000D280A /* LaunchView.h */,
+				D7CDA6F4176222EA000D280A /* LaunchView.m */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -425,6 +439,7 @@
 				D755E95D175F886400A23FDE /* UserDataStore.m in Sources */,
 				D755E961175FA6CA00A23FDE /* TabBarController.m in Sources */,
 				D7CDA6E4175FC6EA000D280A /* TabView.m in Sources */,
+				D7CDA6F5176222EA000D280A /* LaunchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
