@@ -9,7 +9,7 @@
 - Index User title:
   - 26px Amaranth Regular #757575
 
-# Welcome screen
+# Welcome Screen
 
 - Background
   - #185ba6
@@ -34,7 +34,7 @@
   - Background: #023e82
   - 26px Amaranth Regular #b7cbe1
 
-# Tab bar
+# Tab Bar
 
 - Text
   - 30px Amaranth Regular
@@ -70,14 +70,14 @@
   - #3c3b3b 90% opacity
 - Grabby footer bar (for lack of a better term)
   - Background: #353535
-  - User icon
-    - 55x55
-  - Username/listing time text
-    - 26px Amaranth Regular #999999
-  - Price text
-    - 26px Amaranth Regular #ffffff
-  - Grabby bar
-    - Two 1px solid #676767 lines at 60px wide
+- User icon
+  - 55x55
+- Username/listing time text
+  - 26px Amaranth Regular #999999
+- Price text
+  - 26px Amaranth Regular #ffffff
+- Grabby bar
+  - Two 1px solid #676767 lines at 60px wide
 
 # Send Message
 
