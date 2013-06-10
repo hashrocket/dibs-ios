@@ -126,7 +126,6 @@
   - 131x100
   - 5px border-radius
 - Add image button
-  -
 - Delete button
   - 33px Amaranth Regular #ffffff
   - Background: #c95353
