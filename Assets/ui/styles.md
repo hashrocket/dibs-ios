@@ -81,12 +81,9 @@
 
 # Send Message
 
-- Background
-  - #e0e0e1
-- Border radius
-  - 15px
-- Padding
-  - 40px 20px 20px 20px
+- Background: #e0e0e1
+- 15px border-radius
+- Padding: 40px 20px 20px 20px
 - Header
   - 58px Amaranth Regular #185ba6
 - Textarea
@@ -97,7 +94,7 @@
   - Border-radius: 10px
 - Send button
   - Background: #185ba6
-  - Border-radius: 10px
+  - 10px border-radius
   - 32px Amaranth Regular #e4ebf4
 
 ## Message Status (Pending, Success)
@@ -113,14 +110,26 @@
   - Background: #eaeaea
   - Text: 26px Amaranth Regular #185ba6
 
-
 ## Edit Form
 
 - Label
-  - 26px Amaranth Regular
-  - #185ba6
+  - 26px Amaranth Regular #185ba6
 - Text input
   - 26px Helvetica Neue Bold #333333
   - Background: #ffffff
   - Border: 1px solid #a5a5a5, 2px border-radius
   - Padding: 20px
+- Remove image button
+  - Background: #c95353
+  - Border-radius: 10px
+- Image thumb
+  - 131x100
+  - 5px border-radius
+- Add image button
+  -
+- Delete button
+  - 33px Amaranth Regular #ffffff
+  - Background: #c95353
+- Mark as Sold button
+  - 33px Amaranth Regular #ffffff
+  - Background: #185ba6
