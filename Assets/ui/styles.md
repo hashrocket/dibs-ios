@@ -133,7 +133,9 @@
   - 33px Amaranth Regular #ffffff
   - Background: #185ba6
 
-## Dibs Message Index and Show
+## Dibs Messages
+
+### Index and Show
 
 - Header
   - 40px Amaranth Regular #185ba6
@@ -145,7 +147,20 @@
   - 20px Helvetica Neue Medium #7d7b7b
   - Uppercase
 
-## Dibs Message Show
+### Show
 
 - Message body
   - 20px/31px Helvetica Neue Regular #404040
+
+# Item Add
+
+## Add Image modal
+
+- Title
+  - 30px Amaranth Regular #ffffff
+  - Background: #185ba6
+  - Height: 88px
+- Button text
+  - 28px Amaranth Regular #555555
+- Divider line
+  - 1px solid #a5a5a5
