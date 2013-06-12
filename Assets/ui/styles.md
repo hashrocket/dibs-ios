@@ -164,3 +164,17 @@
   - 28px Amaranth Regular #555555
 - Divider line
   - 1px solid #a5a5a5
+
+# Signout Menu
+
+- Background: #424242
+- Width: 470px
+- User
+  - Profile picture
+    - 140x140
+  - Name
+    - 34px Amaranth Regular #e8e8e8
+- Sign Out button
+  - 28px Amaranth Regular #c7c7c7
+  - Background: #353535
+  - Border top & bottom: 1px solid #606060
