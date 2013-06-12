@@ -97,7 +97,7 @@
   - 10px border-radius
   - 32px Amaranth Regular #e4ebf4
 
-## Message Status (Pending, Success)
+## Message Status modal (Pending, Success)
 
 - Text
   - 46px Amaranth Regular #185ba6
@@ -132,3 +132,20 @@
 - Mark as Sold button
   - 33px Amaranth Regular #ffffff
   - Background: #185ba6
+
+## Dibs Message Index and Show
+
+- Header
+  - 40px Amaranth Regular #185ba6
+- Friend profile picture
+  - 92x92
+- Friend Name
+  - 32px Amaranth Regular #404040
+- Date
+  - 20px Helvetica Neue Medium #7d7b7b
+  - Uppercase
+
+## Dibs Message Show
+
+- Message body
+  - 20px/31px Helvetica Neue Regular #404040
