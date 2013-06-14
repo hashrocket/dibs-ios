@@ -30,9 +30,13 @@
 - Action button
   - Background: #ececec
   - 26px Amaranth Regular #023e82
+  - Highlighted state
+    - Background: #ffffff
 - Cancel button
   - Background: #023e82
   - 26px Amaranth Regular #b7cbe1
+  - Highlighted state
+    - Background: #05366e
 
 # Tab Bar
 
@@ -122,6 +126,8 @@
 - Remove image button
   - Background: #c95353
   - Border-radius: 10px
+  - Highlighted state
+    - Background: #b63939
 - Image thumb
   - 131x100
   - 5px border-radius
@@ -129,9 +135,13 @@
 - Delete button
   - 33px Amaranth Regular #ffffff
   - Background: #c95353
+  - Highlighted state
+    - Background: #b63939
 - Mark as Sold button
   - 33px Amaranth Regular #ffffff
   - Background: #185ba6
+  - Highlighted state
+    - Background: #0c4a90
 
 ## Dibs Messages
 
