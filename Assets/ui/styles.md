@@ -149,7 +149,7 @@
 
 ## Dibs Messages
 
-### Index and Show
+## Index and Show
 
 - Header
   - 40px Amaranth Regular #185ba6
@@ -196,3 +196,5 @@
   - 28px Amaranth Regular #c7c7c7
   - Background: #353535
   - Border top & bottom: 1px solid #606060
+  - Highlighted state
+    - Background: #2e2e2e
