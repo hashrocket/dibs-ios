@@ -123,6 +123,8 @@
   - Background: #ffffff
   - Border: 1px solid #a5a5a5, 2px border-radius
   - Padding: 20px
+  - Highlighted state
+    - Border: 1px solid #185ba6
 - Remove image button
   - Background: #c95353
   - Border-radius: 10px
@@ -156,6 +158,10 @@
 - Date
   - 20px Helvetica Neue Medium #7d7b7b
   - Uppercase
+- Background: #f9f9f9
+- Border: 1px solid #d1d1d1
+- Highlighted state
+  - Background: #ffffff
 
 ### Show
 
