@@ -100,6 +100,8 @@
   - Background: #185ba6
   - 10px border-radius
   - 32px Amaranth Regular #e4ebf4
+  - Highlighted state
+    - Background: #0c4a90
 
 ## Message Status modal (Pending, Success)
 
