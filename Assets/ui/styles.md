@@ -11,8 +11,7 @@
 
 # Welcome Screen
 
-- Background
-  - #185ba6
+- Background: #185ba6
 - Intro text
   - 36px Amaranth Regular #ebf1f8v
 - Facebook button
@@ -22,9 +21,9 @@
 
 # Title Bar
 
-- height: 88px
-- logo: titlebar_logo.png
-- background: #185ba6 90% opacity
+- Height: 88px
+- Logo: titlebar_logo.png
+- Background: #185ba6 90% opacity
 - Text (when applicable)
   - 26px Amaranth Regular #ffffff
 - Action button
@@ -51,18 +50,12 @@
 
 # Index List
 
-- Item background
-  - #ffffff
-- Padding from sides and top
-  - 20px
-- Item border
-  - 1px solid #d6d6d6
-- Item user background
-  - #f6f6f6
-- Item user top border
-  - 1px solid #dedede
+- Item background: #ffffff
+- Padding from sides and top: 20px
+- Item border: 1px solid #d6d6d6
+- Item user background: #f6f6f6
+- Item user top border: 1px solid #dedede
 - User avatar
-  - Circle
   - 47x47
 - Dibbed/Number of Dibs circle notification
   - Background: #185ba6
@@ -70,8 +63,7 @@
 
 # Item Show
 
-- Background
-  - #3c3b3b 90% opacity
+- Background: #3c3b3b 90% opacity
 - Grabby footer bar (for lack of a better term)
   - Background: #353535
 - User icon
@@ -149,7 +141,7 @@
 
 ## Dibs Messages
 
-## Index and Show
+### Index and Show
 
 - Header
   - 40px Amaranth Regular #185ba6
