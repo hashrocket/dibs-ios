@@ -19,6 +19,10 @@
 #import "UserDataStore.h"
 #import "NotificationKonstants.h"
 
+static CGRect windowBounds() {
+  return [[UIScreen mainScreen] bounds];
+}
+
 static NSString* strf(NSString *format, ...) {
   NSString *contents;
   va_list args;

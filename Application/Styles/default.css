@@ -1,6 +1,24 @@
-button {
-  background-color: #325d9a;
+#launch_view {
+  background-color: #185ba6;
 }
-button:selected {
-  background-color: #5190d8;
+
+#launch_view button {
+  background-color: #064388;
+  image-edge-right-inset: 90;
+  border-radius: 6;
+}
+
+#launch_view button label {
+  color: #a7c2e1;
+}
+
+#launch_view label {
+  background-color: rgba(clear,0);
+  color: white;
+  font-align: center;
+  font-family: Amaranth;
+}
+
+#launch_view button:selected {
+  background-color: #053b78;
 }

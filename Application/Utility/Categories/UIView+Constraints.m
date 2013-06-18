@@ -2,8 +2,24 @@
 
 @implementation UIView (Constraints)
 
+-(void)addEqualityConstraintFor:(UIView*)firstView relatedBy:(NSLayoutAttribute)firstAttribute
+                             on:(UIView*)secondView relatedBy:(NSLayoutAttribute)secondAttribute
+                       constant:(CGFloat)constant {
+  [self addConstraint:[NSLayoutConstraint constraintWithItem:firstView attribute:firstAttribute
+                                                   relatedBy:NSLayoutRelationEqual
+                                                      toItem:secondView attribute:secondAttribute
+                                                  multiplier:1.0 constant:constant]];
+}
+
+-(void)addEqualityConstraintFor:(UIView*)firstView relatedBy:(NSLayoutAttribute)firstAttribute
+                             on:(UIView*)secondView relatedBy:(NSLayoutAttribute)secondAttribute {
+  [self addEqualityConstraintFor:firstView relatedBy:firstAttribute
+                              on:secondView relatedBy:secondAttribute
+                        constant:0.0];
+}
+
 -(void)addEqualityConstraintOn:(NSLayoutAttribute)attribute forSubview:(UIView*)subview {
-  [self addConstraint:[NSLayoutConstraint constraintWithItem:subview attribute:attribute relatedBy:NSLayoutRelationEqual toItem:self attribute:attribute multiplier:1.0 constant:0.0]];
+  [self addEqualityConstraintFor:self relatedBy:attribute on:subview relatedBy:attribute];
 }
 
 -(void)addConstraintsWithVisualFormat:(NSString *)format forSubviews:(NSDictionary *)views {
@@ -20,4 +36,5 @@
     [self addConstraintsWithVisualFormat:uniformat forSubviews:views];
   }];
 }
+
 @end
