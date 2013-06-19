@@ -23,6 +23,7 @@ UIButton *buttonFor(NSString *title, NSUInteger tag) {
 
 - (id)initWithDelegate:(id<TabViewDelegate>)delegate {
   if (self = [super init]) {
+    [self setStyleId:@"tab_view"];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setDelegate:delegate];
     [self setNeedsUpdateConstraints];
@@ -71,7 +72,7 @@ UIButton *buttonFor(NSString *title, NSUInteger tag) {
   UIButton *button = [self.buttons detect:^BOOL(UIButton* button) {
     return button.tag == index;
   }];
-  [button setSelected:YES];
+  [self didTapButton:button];
 }
 
 -(void)updateConstraints {
@@ -89,9 +90,9 @@ UIButton *buttonFor(NSString *title, NSUInteger tag) {
 
 -(void)didTapButton:(UIButton*)sender {
   [self.buttons each:^(id button) {
-    [button setSelected:NO];
+    [button setStyleClass:@"inactive"];
   }];
-  [sender setSelected:YES];
+  [sender setStyleClass:@"active"];
   [self.delegate didTapButtonAtIndex:sender.tag];
 }
 

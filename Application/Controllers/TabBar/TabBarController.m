@@ -11,6 +11,7 @@
 
 -(id)init {
   if (self = [super init]) {
+    [self.view setStyleId:@"tab_container"];
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.tabView];
     [self.tabView addButton:@"Buy"];

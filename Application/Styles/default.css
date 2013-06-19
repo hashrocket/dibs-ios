@@ -22,3 +22,21 @@
 #launch_view button:selected {
   background-color: #053b78;
 }
+
+#tab_container #tab_view button {
+  background-color: #353535;
+}
+
+#tab_container #tab_view button label {
+  font-family: Amaranth;
+  font-size: 15px;
+  color: white;
+}
+
+#tab_container #tab_view button.inactive {
+  background-color: #424242;
+}
+
+#tab_container #tab_view button.inactive label {
+  color: #bababa;
+}
