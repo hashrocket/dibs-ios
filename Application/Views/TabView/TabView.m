@@ -2,6 +2,8 @@
 #import "TabViewDelegate.h"
 
 static CGFloat kTabViewHeight = 40;
+static NSString *kActiveStyleName = @"active";
+static NSString *kInactiveStyleName = @"inactive";
 
 UIButton *buttonFor(NSString *title, NSUInteger tag) {
   UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -90,9 +92,9 @@ UIButton *buttonFor(NSString *title, NSUInteger tag) {
 
 -(void)didTapButton:(UIButton*)sender {
   [self.buttons each:^(id button) {
-    [button setStyleClass:@"inactive"];
+    [button setStyleClass:kInactiveStyleName];
   }];
-  [sender setStyleClass:@"active"];
+  [sender setStyleClass:kActiveStyleName];
   [self.delegate didTapButtonAtIndex:sender.tag];
 }
 
