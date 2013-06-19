@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C5F43AB177258FD00350E2D /* iphone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F43AA177258FD00350E2D /* iphone_icon.png */; };
+		7C5F43AD1772590200350E2D /* iphone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F43AC1772590200350E2D /* iphone_icon@2x.png */; };
 		7C621B601770F493007ADEA2 /* Amaranth-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C621B5E1770F493007ADEA2 /* Amaranth-Bold.ttf */; };
 		7C621B611770F493007ADEA2 /* Amaranth-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C621B5F1770F493007ADEA2 /* Amaranth-Regular.ttf */; };
 		999FF7ECA217448D8DC3FD0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF3DA454DF944E59ED06C27 /* libPods.a */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		7C5F43AA177258FD00350E2D /* iphone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_icon.png; sourceTree = "<group>"; };
+		7C5F43AC1772590200350E2D /* iphone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_icon@2x.png"; sourceTree = "<group>"; };
 		7C621B5E1770F493007ADEA2 /* Amaranth-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Bold.ttf"; sourceTree = "<group>"; };
 		7C621B5F1770F493007ADEA2 /* Amaranth-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Regular.ttf"; sourceTree = "<group>"; };
 		D755E95B175F886400A23FDE /* UserDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataStore.h; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 		D7C4C2CB175E184C007B65F7 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F43AA177258FD00350E2D /* iphone_icon.png */,
+				7C5F43AC1772590200350E2D /* iphone_icon@2x.png */,
 			);
 			path = Icon;
 			sourceTree = "<group>";
@@ -429,6 +435,8 @@
 				D7CDA6F117622284000D280A /* logo_full@2x.png in Resources */,
 				7C621B601770F493007ADEA2 /* Amaranth-Bold.ttf in Resources */,
 				7C621B611770F493007ADEA2 /* Amaranth-Regular.ttf in Resources */,
+				7C5F43AB177258FD00350E2D /* iphone_icon.png in Resources */,
+				7C5F43AD1772590200350E2D /* iphone_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
