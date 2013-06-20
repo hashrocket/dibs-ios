@@ -31,9 +31,13 @@
 }
 
 -(void)addUniformConstraintsWithVisualFormat:(NSString *)format forSubviews:(NSDictionary *)views {
+  [self addUniformConstraintsWithVisualFormat:format forSubviews:views withMetrics:nil];
+}
+
+-(void)addUniformConstraintsWithVisualFormat:(NSString *)format forSubviews:(NSDictionary *)views withMetrics:(NSDictionary *)metrics {
   [@[@"H:",@"V:"] each:^(NSString *direction) {
     NSString *uniformat = [direction stringByAppendingString:format];
-    [self addConstraintsWithVisualFormat:uniformat forSubviews:views];
+    [self addConstraintsWithVisualFormat:uniformat forSubviews:views withMetrics:metrics];
   }];
 }
 
