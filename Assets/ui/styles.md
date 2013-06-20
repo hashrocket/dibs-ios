@@ -2,12 +2,6 @@
 
 - Main background
   - #e0e0e1a
-- Index Item title:
-  - 40px Amaranth Regular #185ba6
-- Index Price title:
-  - 32px Amaranth Regular #4a4a4b
-- Index User title:
-  - 26px Amaranth Regular #757575
 
 # Welcome Screen
 
@@ -53,6 +47,12 @@
 - Item background: #ffffff
 - Padding from sides and top: 20px
 - Item border: 1px solid #d6d6d6
+- Index Item title:
+  - 40px Amaranth Regular #185ba6
+- Index Price title:
+  - 32px Amaranth Regular #4a4a4b
+- Index User title:
+  - 26px Amaranth Regular #757575
 - Item user background: #f6f6f6
 - Item user top border: 1px solid #dedede
 - User avatar
