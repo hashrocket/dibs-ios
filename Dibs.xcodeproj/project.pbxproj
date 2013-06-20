@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7C5F43AB177258FD00350E2D /* iphone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F43AA177258FD00350E2D /* iphone_icon.png */; };
 		7C5F43AD1772590200350E2D /* iphone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F43AC1772590200350E2D /* iphone_icon@2x.png */; };
+		7C5F43B11772636100350E2D /* FriendsItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43B01772636100350E2D /* FriendsItemsController.m */; };
+		7C5F43B5177267D700350E2D /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43B4177267D700350E2D /* ItemCell.m */; };
+		7C5F43B91772691300350E2D /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43B81772691300350E2D /* Item.m */; };
+		7C5F43BD1772692C00350E2D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43BC1772692C00350E2D /* User.m */; };
 		7C621B601770F493007ADEA2 /* Amaranth-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C621B5E1770F493007ADEA2 /* Amaranth-Bold.ttf */; };
 		7C621B611770F493007ADEA2 /* Amaranth-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C621B5F1770F493007ADEA2 /* Amaranth-Regular.ttf */; };
 		999FF7ECA217448D8DC3FD0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF3DA454DF944E59ED06C27 /* libPods.a */; };
@@ -43,6 +47,14 @@
 		78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		7C5F43AA177258FD00350E2D /* iphone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_icon.png; sourceTree = "<group>"; };
 		7C5F43AC1772590200350E2D /* iphone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_icon@2x.png"; sourceTree = "<group>"; };
+		7C5F43AF1772636100350E2D /* FriendsItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsItemsController.h; sourceTree = "<group>"; };
+		7C5F43B01772636100350E2D /* FriendsItemsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsItemsController.m; sourceTree = "<group>"; };
+		7C5F43B3177267D700350E2D /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		7C5F43B4177267D700350E2D /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
+		7C5F43B71772691300350E2D /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = Item/Item.h; sourceTree = SOURCE_ROOT; };
+		7C5F43B81772691300350E2D /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Item/Item.m; sourceTree = SOURCE_ROOT; };
+		7C5F43BB1772692B00350E2D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = User/User.h; sourceTree = SOURCE_ROOT; };
+		7C5F43BC1772692C00350E2D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = User/User.m; sourceTree = SOURCE_ROOT; };
 		7C621B5E1770F493007ADEA2 /* Amaranth-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Bold.ttf"; sourceTree = "<group>"; };
 		7C621B5F1770F493007ADEA2 /* Amaranth-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Regular.ttf"; sourceTree = "<group>"; };
 		D755E95B175F886400A23FDE /* UserDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataStore.h; sourceTree = "<group>"; };
@@ -103,6 +115,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C5F43AE1772632700350E2D /* FriendsItems */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F43AF1772636100350E2D /* FriendsItemsController.h */,
+				7C5F43B01772636100350E2D /* FriendsItemsController.m */,
+			);
+			path = FriendsItems;
+			sourceTree = "<group>";
+		};
+		7C5F43B2177267A000350E2D /* ItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F43B3177267D700350E2D /* ItemCell.h */,
+				7C5F43B4177267D700350E2D /* ItemCell.m */,
+			);
+			path = ItemCell;
+			sourceTree = "<group>";
+		};
+		7C5F43B6177268F400350E2D /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F43B71772691300350E2D /* Item.h */,
+				7C5F43B81772691300350E2D /* Item.m */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		7C5F43BA1772691600350E2D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F43BB1772692B00350E2D /* User.h */,
+				7C5F43BC1772692C00350E2D /* User.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		7C621B591770F42D007ADEA2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +237,7 @@
 		D7C4C2C5175E184C007B65F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F43AE1772632700350E2D /* FriendsItems */,
 				D7C4C2E2175E2EB2007B65F7 /* Launch */,
 				D755E95E175FA67600A23FDE /* TabBar */,
 			);
@@ -198,6 +247,8 @@
 		D7C4C2C6175E184C007B65F7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F43B6177268F400350E2D /* Item */,
+				7C5F43BA1772691600350E2D /* User */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +267,7 @@
 		D7C4C2C8175E184C007B65F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F43B2177267A000350E2D /* ItemCell */,
 				D7CDA6F2176222B9000D280A /* Launch */,
 				D7CDA6E1175FC6EA000D280A /* TabView */,
 			);
@@ -487,6 +539,10 @@
 				D755E961175FA6CA00A23FDE /* TabBarController.m in Sources */,
 				D7CDA6E4175FC6EA000D280A /* TabView.m in Sources */,
 				D7CDA6F5176222EA000D280A /* LaunchView.m in Sources */,
+				7C5F43B11772636100350E2D /* FriendsItemsController.m in Sources */,
+				7C5F43B5177267D700350E2D /* ItemCell.m in Sources */,
+				7C5F43B91772691300350E2D /* Item.m in Sources */,
+				7C5F43BD1772692C00350E2D /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

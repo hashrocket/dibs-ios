@@ -1,3 +1,8 @@
+label {
+  font-family: Amaranth;
+  background-color: rgba(clear,0);
+}
+
 #launch_view {
   background-color: #185ba6;
 }
@@ -13,14 +18,16 @@
 }
 
 #launch_view label {
-  background-color: rgba(clear,0);
   color: white;
   font-align: center;
-  font-family: Amaranth;
 }
 
 #launch_view button:selected {
   background-color: #053b78;
+}
+
+#tab_container {
+  background-color: #e0e0e1;
 }
 
 #tab_container #tab_view button {
@@ -28,7 +35,6 @@
 }
 
 #tab_container #tab_view button label {
-  font-family: Amaranth;
   font-size: 15px;
   color: white;
 }
@@ -39,4 +45,33 @@
 
 #tab_container #tab_view button.inactive label {
   color: #bababa;
+}
+
+#tab_container collection-view {
+  background-color: rgba(0,0,0,0);
+}
+
+#tab_container collection-view-cell.item_cell {
+  background-color: white;
+  border-radius: 5px;
+  border-color: #d6d6d6;
+  border-width: 1px;
+}
+
+#tab_container collection-view-cell label.item_title {
+  font-weight: bold;
+  color: #185ba6;
+  font-size: 20px;
+}
+
+#tab_container collection-view-cell label.item_price {
+  color: #4a4a4a;
+  font-size: 16px;
+}
+
+#tab_container collection-view-cell view.author_container {
+  background-color: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  border-color: #d6d6d6;
+  border-width: 1px;
 }
