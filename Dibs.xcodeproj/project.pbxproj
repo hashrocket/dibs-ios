@@ -13,6 +13,8 @@
 		7C5F43B5177267D700350E2D /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43B4177267D700350E2D /* ItemCell.m */; };
 		7C5F43B91772691300350E2D /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43B81772691300350E2D /* Item.m */; };
 		7C5F43BD1772692C00350E2D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43BC1772692C00350E2D /* User.m */; };
+		7C5F43C71773D7CD00350E2D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F43C61773D7CD00350E2D /* SystemConfiguration.framework */; };
+		7C5F43C91773D83E00350E2D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F43C81773D83E00350E2D /* MobileCoreServices.framework */; };
 		7C621B601770F493007ADEA2 /* Amaranth-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C621B5E1770F493007ADEA2 /* Amaranth-Bold.ttf */; };
 		7C621B611770F493007ADEA2 /* Amaranth-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C621B5F1770F493007ADEA2 /* Amaranth-Regular.ttf */; };
 		999FF7ECA217448D8DC3FD0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF3DA454DF944E59ED06C27 /* libPods.a */; };
@@ -55,6 +57,8 @@
 		7C5F43B81772691300350E2D /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Item/Item.m; sourceTree = SOURCE_ROOT; };
 		7C5F43BB1772692B00350E2D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = User/User.h; sourceTree = SOURCE_ROOT; };
 		7C5F43BC1772692C00350E2D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = User/User.m; sourceTree = SOURCE_ROOT; };
+		7C5F43C61773D7CD00350E2D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7C5F43C81773D83E00350E2D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		7C621B5E1770F493007ADEA2 /* Amaranth-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Bold.ttf"; sourceTree = "<group>"; };
 		7C621B5F1770F493007ADEA2 /* Amaranth-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Regular.ttf"; sourceTree = "<group>"; };
 		D755E95B175F886400A23FDE /* UserDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataStore.h; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5F43C91773D83E00350E2D /* MobileCoreServices.framework in Frameworks */,
+				7C5F43C71773D7CD00350E2D /* SystemConfiguration.framework in Frameworks */,
 				D7CDA6E81760C52D000D280A /* QuartzCore.framework in Frameworks */,
 				D7C4C2A4175E15DE007B65F7 /* UIKit.framework in Frameworks */,
 				D7C4C2A6175E15DE007B65F7 /* Foundation.framework in Frameworks */,
@@ -201,12 +207,14 @@
 		D7C4C2A2175E15DE007B65F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D7CDA6E71760C52D000D280A /* QuartzCore.framework */,
-				D7C4C2EF175E544E007B65F7 /* PXEngine.framework */,
-				D7C4C2A3175E15DE007B65F7 /* UIKit.framework */,
-				D7C4C2A5175E15DE007B65F7 /* Foundation.framework */,
 				D7C4C2A7175E15DE007B65F7 /* CoreGraphics.framework */,
+				D7C4C2A5175E15DE007B65F7 /* Foundation.framework */,
 				DEF3DA454DF944E59ED06C27 /* libPods.a */,
+				7C5F43C81773D83E00350E2D /* MobileCoreServices.framework */,
+				D7C4C2EF175E544E007B65F7 /* PXEngine.framework */,
+				D7CDA6E71760C52D000D280A /* QuartzCore.framework */,
+				7C5F43C61773D7CD00350E2D /* SystemConfiguration.framework */,
+				D7C4C2A3175E15DE007B65F7 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
