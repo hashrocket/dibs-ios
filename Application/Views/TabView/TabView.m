@@ -1,21 +1,17 @@
 #import "TabView.h"
 #import "TabViewDelegate.h"
+#import "TabButton.h"
 
-static CGFloat kTabViewHeight = 40;
-static NSString *kActiveStyleName = @"active";
-static NSString *kInactiveStyleName = @"inactive";
+static CGFloat kTabViewHeight = 64.f;
 
-UIButton *buttonFor(NSString *title, NSUInteger tag) {
-  UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-  [button setTranslatesAutoresizingMaskIntoConstraints:NO];
-  [button setTitle:title forState:UIControlStateNormal];
+UIView *buttonViewFor(NSString *title, NSString *iconName, NSUInteger tag) {
+  TabButton *button = [TabButton buttonWithTitle:title andIconName:iconName];
   [button setTag:tag];
   return button;
 }
 
 @interface TabView()
 @property(nonatomic,weak) id<TabViewDelegate> delegate;
-@property(nonatomic,strong) NSMutableArray *buttonTitles;
 @property(nonatomic,strong) NSMutableArray *buttons;
 -(NSDictionary*)autolayoutDictionary;
 -(NSString*)autolayoutHorizontalFormat;
@@ -31,13 +27,6 @@ UIButton *buttonFor(NSString *title, NSUInteger tag) {
     [self setNeedsUpdateConstraints];
   }
   return self;
-}
-
--(NSMutableArray*)buttonTitles {
-  if (!_buttonTitles) {
-    _buttonTitles = [NSMutableArray array];
-  }
-  return _buttonTitles;
 }
 
 -(NSMutableArray*)buttons {
@@ -62,8 +51,11 @@ UIButton *buttonFor(NSString *title, NSUInteger tag) {
 }
 
 -(void)addButton:(NSString *)title {
-  [self.buttonTitles addObject:title];
-  UIButton *button = buttonFor(title,[self.buttonTitles indexOfObject:title]);
+  [self addButton:title withIconNamed:nil];
+}
+
+-(void)addButton:(NSString *)title withIconNamed:(NSString *)iconName {
+  TabButton *button = [TabButton buttonWithTitle:title andIconName:iconName];
   [button addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
   [self.buttons addObject:button];
   [self addSubview:button];
@@ -71,7 +63,7 @@ UIButton *buttonFor(NSString *title, NSUInteger tag) {
 }
 
 -(void)selectButtonAtIndex:(NSInteger)index {
-  UIButton *button = [self.buttons detect:^BOOL(UIButton* button) {
+  TabButton *button = [self.buttons detect:^BOOL(UIButton* button) {
     return button.tag == index;
   }];
   [self didTapButton:button];
@@ -90,11 +82,11 @@ UIButton *buttonFor(NSString *title, NSUInteger tag) {
   }];
 }
 
--(void)didTapButton:(UIButton*)sender {
+-(void)didTapButton:(TabButton*)sender {
   [self.buttons each:^(id button) {
-    [button setStyleClass:kInactiveStyleName];
+    [button setEnabled:YES];
   }];
-  [sender setStyleClass:kActiveStyleName];
+  [sender setEnabled:NO];
   [self.delegate didTapButtonAtIndex:sender.tag];
 }
 

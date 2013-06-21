@@ -26,8 +26,8 @@ static CGFloat kPadding = 10;
     [self.view setStyleId:@"tab_container"];
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.tabView];
-    [self.tabView addButton:@"Buy"];
-    [self.tabView addButton:@"Sell"];
+    [self.tabView addButton:@"Buy" withIconNamed:@"icon_buy"];
+    [self.tabView addButton:@"Sell" withIconNamed:@"icon_sell"];
     [self.tabView selectButtonAtIndex:0];
     [self.view addSubview:self.contentView];
     [self.view setNeedsUpdateConstraints];
@@ -81,7 +81,7 @@ static CGFloat kPadding = 10;
   [self.view addEqualityConstraintOn:NSLayoutAttributeRight forSubview:self.tabView];
   [self.view addConstraintsWithVisualFormat:@"V:[tabview(height)]"
                                      forSubviews:@{@"tabview": self.tabView}
-                                     withMetrics:@{@"height": @(40)}];
+                                     withMetrics:@{@"height": @(64)}];
   [self.view addEqualityConstraintOn:NSLayoutAttributeTop forSubview:self.contentView];
   [self.view addEqualityConstraintOn:NSLayoutAttributeLeft forSubview:self.contentView];
   [self.view addEqualityConstraintOn:NSLayoutAttributeRight forSubview:self.contentView];

@@ -30,21 +30,8 @@ label {
   background-color: #e0e0e1;
 }
 
-#tab_container #tab_view button {
-  background-color: #353535;
-}
-
-#tab_container #tab_view button label {
+#tab_container #tab_view .tab_button label {
   font-size: 15px;
-  color: white;
-}
-
-#tab_container #tab_view button.inactive {
-  background-color: #424242;
-}
-
-#tab_container #tab_view button.inactive label {
-  color: #bababa;
 }
 
 #tab_container collection-view {
