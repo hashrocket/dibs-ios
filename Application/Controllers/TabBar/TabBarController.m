@@ -16,6 +16,7 @@ static CGFloat kPadding = 10;
 -(UICollectionView*)contentView;
 -(FriendsItemsController*)friendsItemsController;
 -(UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>*)controllerForIndex:(NSInteger)index;
+-(void)didInvalidateContent:(NSNotification*)notification;
 @end
 
 @implementation TabBarController
@@ -30,6 +31,10 @@ static CGFloat kPadding = 10;
     [self.tabView selectButtonAtIndex:0];
     [self.view addSubview:self.contentView];
     [self.view setNeedsUpdateConstraints];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didInvalidateContent:)
+                                                 name:TabBarContentControllerWasInvalidated
+                                               object:nil];
   }
   return self;
 }
@@ -87,6 +92,10 @@ static CGFloat kPadding = 10;
 -(void)didTapButtonAtIndex:(NSInteger)index {
   [self.contentView setDataSource:[self controllerForIndex:index]];
   [self.contentView setDelegate:[self controllerForIndex:index]];
+  [self.contentView reloadData];
+}
+
+-(void)didInvalidateContent:(NSNotification *)notification {
   [self.contentView reloadData];
 }
 

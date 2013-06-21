@@ -9,6 +9,13 @@
 @end
 
 @implementation Item
+
++(NSArray*)parse:(NSArray *)itemAttributes {
+  return [itemAttributes map:^id(NSDictionary *attrs) {
+    return [[Item alloc] initWithDictionary:attrs];
+  }];
+}
+
 -(id)initWithDictionary:(NSDictionary *)attrs {
   if (self = [super init]) {
     [self setAttributes:attrs];

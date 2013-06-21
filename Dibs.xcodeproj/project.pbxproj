@@ -13,6 +13,7 @@
 		7C5F43B5177267D700350E2D /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43B4177267D700350E2D /* ItemCell.m */; };
 		7C5F43B91772691300350E2D /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43B81772691300350E2D /* Item.m */; };
 		7C5F43BD1772692C00350E2D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43BC1772692C00350E2D /* User.m */; };
+		7C5F43C51773D71300350E2D /* DibsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43C41773D71300350E2D /* DibsClient.m */; };
 		7C5F43C71773D7CD00350E2D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F43C61773D7CD00350E2D /* SystemConfiguration.framework */; };
 		7C5F43C91773D83E00350E2D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F43C81773D83E00350E2D /* MobileCoreServices.framework */; };
 		7C621B601770F493007ADEA2 /* Amaranth-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C621B5E1770F493007ADEA2 /* Amaranth-Bold.ttf */; };
@@ -57,6 +58,8 @@
 		7C5F43B81772691300350E2D /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Item/Item.m; sourceTree = SOURCE_ROOT; };
 		7C5F43BB1772692B00350E2D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = User/User.h; sourceTree = SOURCE_ROOT; };
 		7C5F43BC1772692C00350E2D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = User/User.m; sourceTree = SOURCE_ROOT; };
+		7C5F43C31773D71300350E2D /* DibsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DibsClient.h; sourceTree = "<group>"; };
+		7C5F43C41773D71300350E2D /* DibsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DibsClient.m; sourceTree = "<group>"; };
 		7C5F43C61773D7CD00350E2D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7C5F43C81773D83E00350E2D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		7C621B5E1770F493007ADEA2 /* Amaranth-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Bold.ttf"; sourceTree = "<group>"; };
@@ -155,6 +158,15 @@
 				7C5F43BC1772692C00350E2D /* User.m */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		7C5F43C21773D71300350E2D /* DibsClient */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F43C31773D71300350E2D /* DibsClient.h */,
+				7C5F43C41773D71300350E2D /* DibsClient.m */,
+			);
+			path = DibsClient;
 			sourceTree = "<group>";
 		};
 		7C621B591770F42D007ADEA2 /* Fonts */ = {
@@ -264,6 +276,7 @@
 		D7C4C2C7175E184C007B65F7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F43C21773D71300350E2D /* DibsClient */,
 				D7C4C2F1175E5550007B65F7 /* Categories */,
 				D7C4C2F2175E560F007B65F7 /* Environment */,
 				D7CDA6E5175FC7C7000D280A /* Protocols */,
@@ -551,6 +564,7 @@
 				7C5F43B5177267D700350E2D /* ItemCell.m in Sources */,
 				7C5F43B91772691300350E2D /* Item.m in Sources */,
 				7C5F43BD1772692C00350E2D /* User.m in Sources */,
+				7C5F43C51773D71300350E2D /* DibsClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

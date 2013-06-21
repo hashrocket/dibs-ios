@@ -6,6 +6,8 @@
 
 @property(nonatomic,strong) NSDictionary *attributes;
 
++(NSArray*)parse:(NSArray*)itemAttributes;
+
 -(id)initWithDictionary:(NSDictionary*)attrs;
 
 -(NSURL*)primaryImageURL;

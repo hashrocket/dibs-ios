@@ -20,6 +20,7 @@
 #import "Environment.h"
 #import "UserDataStore.h"
 #import "NotificationKonstants.h"
+#import "DibsClient.h"
 
 static CGRect windowBounds() {
   return [[UIScreen mainScreen] bounds];

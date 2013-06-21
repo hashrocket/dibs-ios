@@ -29,6 +29,10 @@ static Environment *sharedInstance = nil;
   return environments[configuration];
 }
 
+-(NSURL*)baseAPIURL {
+  return [NSURL URLWithString:[self.config valueForKey:@"APIBaseURL"]];
+}
+
 -(NSString*)pixateLicenseKey {
   return self.config[@"pixateLicenseKey"];
 }

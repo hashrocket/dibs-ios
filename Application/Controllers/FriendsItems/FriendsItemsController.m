@@ -5,23 +5,27 @@
 static CGFloat kPadding = 10;
 
 @interface FriendsItemsController ()
-
+@property(nonatomic,strong) NSArray *items;
 @end
 
 @implementation FriendsItemsController
 
 - (id)init {
   if (self = [super init]) {
+    [[DibsClient client] getPath:@"items" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      [self setItems:[Item parse:responseObject]];
+      postNotification(TabBarContentControllerWasInvalidated);
+    } failure:nil];
   }
   return self;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-  return 3;
+  return [self.items count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   ItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ItemCell" forIndexPath:indexPath];
-  // obtain and set item on cell
+  [cell setItem:self.items[indexPath.row]];
   return cell;
 }
 

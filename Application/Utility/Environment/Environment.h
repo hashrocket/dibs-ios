@@ -4,6 +4,7 @@
 
 +(id)sharedInstance;
 
+-(NSURL*)baseAPIURL;
 -(NSString*)pixateLicenseKey;
 -(NSString*)pixateLicenseUser;
 -(NSString*)facebookAppID;

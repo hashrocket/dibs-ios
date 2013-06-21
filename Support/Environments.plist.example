@@ -4,6 +4,8 @@
 <dict>
 	<key>local</key>
 	<dict>
+		<key>APIBaseURL</key>
+		<string>http://127.0.0.1:3000/api</string>
 		<key>facebookAppID</key>
 		<string>APPIDGOESHERE</string>
 		<key>pixateLicenseKey</key>
@@ -13,6 +15,8 @@
 	</dict>
 	<key>staging</key>
 	<dict>
+		<key>APIBaseURL</key>
+		<string>http://staging.yaydibs.com/api</string>
 		<key>facebookAppID</key>
 		<string>APPIDGOESHERE</string>
 		<key>pixateLicenseKey</key>
@@ -22,6 +26,8 @@
 	</dict>
 	<key>production</key>
 	<dict>
+		<key>APIBaseURL</key>
+		<string>http://yaydibs.com/api</string>
 		<key>facebookAppID</key>
 		<string>APPIDGOESHERE</string>
 		<key>pixateLicenseKey</key>
