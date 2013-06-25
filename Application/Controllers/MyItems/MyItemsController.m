@@ -1,18 +1,18 @@
-#import "FriendsItemsController.h"
+#import "MyItemsController.h"
 #import "ItemCell.h"
 #import "Item.h"
 
 static CGFloat kPadding = 10;
 
-@interface FriendsItemsController ()
+@interface MyItemsController ()
 @property(nonatomic,strong) NSArray *items;
 @end
 
-@implementation FriendsItemsController
+@implementation MyItemsController
 
 - (id)init {
   if (self = [super init]) {
-    [[DibsClient client] getPath:@"theirs" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[DibsClient client] getPath:@"mine" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
       [self setItems:[Item parse:responseObject]];
       postNotification(TabBarContentControllerWasInvalidated);
     } failure:nil];

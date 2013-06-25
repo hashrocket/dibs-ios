@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0EE60D177A48AE00D2B347 /* MyItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EE60C177A48AE00D2B347 /* MyItemsController.m */; };
 		7C5F43AB177258FD00350E2D /* iphone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F43AA177258FD00350E2D /* iphone_icon.png */; };
 		7C5F43AD1772590200350E2D /* iphone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F43AC1772590200350E2D /* iphone_icon@2x.png */; };
 		7C5F43B11772636100350E2D /* FriendsItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43B01772636100350E2D /* FriendsItemsController.m */; };
@@ -57,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		7C0EE60B177A48AE00D2B347 /* MyItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyItemsController.h; sourceTree = "<group>"; };
+		7C0EE60C177A48AE00D2B347 /* MyItemsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyItemsController.m; sourceTree = "<group>"; };
 		7C5F43AA177258FD00350E2D /* iphone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_icon.png; sourceTree = "<group>"; };
 		7C5F43AC1772590200350E2D /* iphone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_icon@2x.png"; sourceTree = "<group>"; };
 		7C5F43AF1772636100350E2D /* FriendsItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsItemsController.h; sourceTree = "<group>"; };
@@ -143,6 +146,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C0EE60A177A482200D2B347 /* MyItems */ = {
+			isa = PBXGroup;
+			children = (
+				7C0EE60B177A48AE00D2B347 /* MyItemsController.h */,
+				7C0EE60C177A48AE00D2B347 /* MyItemsController.m */,
+			);
+			path = MyItems;
+			sourceTree = "<group>";
+		};
 		7C5F43AE1772632700350E2D /* FriendsItems */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +305,7 @@
 			children = (
 				7C5F43AE1772632700350E2D /* FriendsItems */,
 				D7C4C2E2175E2EB2007B65F7 /* Launch */,
+				7C0EE60A177A482200D2B347 /* MyItems */,
 				D755E95E175FA67600A23FDE /* TabBar */,
 			);
 			path = Controllers;
@@ -611,6 +624,7 @@
 				7C5F43BD1772692C00350E2D /* User.m in Sources */,
 				7C5F43C51773D71300350E2D /* DibsClient.m in Sources */,
 				7C9024D01774C57F00179819 /* TabButton.m in Sources */,
+				7C0EE60D177A48AE00D2B347 /* MyItemsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,7 @@
 #import "TabBarController.h"
 #import "TabView.h"
 #import "FriendsItemsController.h"
+#import "MyItemsController.h"
 #import "ItemCell.h"
 
 static CGFloat kPadding = 10;
@@ -10,11 +11,13 @@ static CGFloat kPadding = 10;
   UICollectionViewFlowLayout *_layout;
   UICollectionView *_contentView;
   FriendsItemsController *_friendsItemsController;
+  MyItemsController *_myItemsController;
 }
 -(TabView*)tabView;
 -(UICollectionViewFlowLayout*)layout;
 -(UICollectionView*)contentView;
 -(FriendsItemsController*)friendsItemsController;
+-(MyItemsController*)myItemsController;
 -(UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>*)controllerForIndex:(NSInteger)index;
 -(void)didInvalidateContent:(NSNotification*)notification;
 @end
@@ -70,8 +73,15 @@ static CGFloat kPadding = 10;
   return _friendsItemsController;
 }
 
+-(MyItemsController*)myItemsController {
+  if (!_myItemsController) {
+    _myItemsController = [[MyItemsController alloc] init];
+  }
+  return _myItemsController;
+}
+
 -(UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>*)controllerForIndex:(NSInteger)index {
-  return self.friendsItemsController;
+  return @[self.friendsItemsController,self.myItemsController][index];
 }
 
 -(void)updateViewConstraints {

@@ -4,12 +4,6 @@
 
 static CGFloat kTabViewHeight = 64.f;
 
-UIView *buttonViewFor(NSString *title, NSString *iconName, NSUInteger tag) {
-  TabButton *button = [TabButton buttonWithTitle:title andIconName:iconName];
-  [button setTag:tag];
-  return button;
-}
-
 @interface TabView()
 @property(nonatomic,weak) id<TabViewDelegate> delegate;
 @property(nonatomic,strong) NSMutableArray *buttons;
@@ -56,6 +50,7 @@ UIView *buttonViewFor(NSString *title, NSString *iconName, NSUInteger tag) {
 
 -(void)addButton:(NSString *)title withIconNamed:(NSString *)iconName {
   TabButton *button = [TabButton buttonWithTitle:title andIconName:iconName];
+  [button setTag:[self.buttons count]];
   [button addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
   [self.buttons addObject:button];
   [self addSubview:button];
