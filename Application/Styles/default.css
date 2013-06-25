@@ -30,6 +30,9 @@ label {
   background-color: #e0e0e1;
 }
 
+#tab_container #title_bar {
+  background-color: rgba(24,91,166,.9);
+
 #tab_container #tab_view .tab_button label {
   font-size: 15px;
 }

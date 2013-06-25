@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7C0EE60D177A48AE00D2B347 /* MyItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EE60C177A48AE00D2B347 /* MyItemsController.m */; };
+		7C0EE611177A521D00D2B347 /* TitleBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EE610177A521D00D2B347 /* TitleBarView.m */; };
+		7C0EE615177A569900D2B347 /* titlebar_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0EE613177A569900D2B347 /* titlebar_logo.png */; };
+		7C0EE616177A569900D2B347 /* titlebar_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0EE614177A569900D2B347 /* titlebar_logo@2x.png */; };
 		7C5F43AB177258FD00350E2D /* iphone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F43AA177258FD00350E2D /* iphone_icon.png */; };
 		7C5F43AD1772590200350E2D /* iphone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F43AC1772590200350E2D /* iphone_icon@2x.png */; };
 		7C5F43B11772636100350E2D /* FriendsItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F43B01772636100350E2D /* FriendsItemsController.m */; };
@@ -60,6 +63,10 @@
 		78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		7C0EE60B177A48AE00D2B347 /* MyItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyItemsController.h; sourceTree = "<group>"; };
 		7C0EE60C177A48AE00D2B347 /* MyItemsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyItemsController.m; sourceTree = "<group>"; };
+		7C0EE60F177A521D00D2B347 /* TitleBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleBarView.h; sourceTree = "<group>"; };
+		7C0EE610177A521D00D2B347 /* TitleBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleBarView.m; sourceTree = "<group>"; };
+		7C0EE613177A569900D2B347 /* titlebar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titlebar_logo.png; sourceTree = "<group>"; };
+		7C0EE614177A569900D2B347 /* titlebar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titlebar_logo@2x.png"; sourceTree = "<group>"; };
 		7C5F43AA177258FD00350E2D /* iphone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_icon.png; sourceTree = "<group>"; };
 		7C5F43AC1772590200350E2D /* iphone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_icon@2x.png"; sourceTree = "<group>"; };
 		7C5F43AF1772636100350E2D /* FriendsItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsItemsController.h; sourceTree = "<group>"; };
@@ -153,6 +160,24 @@
 				7C0EE60C177A48AE00D2B347 /* MyItemsController.m */,
 			);
 			path = MyItems;
+			sourceTree = "<group>";
+		};
+		7C0EE60E177A51F000D2B347 /* TitleBar */ = {
+			isa = PBXGroup;
+			children = (
+				7C0EE60F177A521D00D2B347 /* TitleBarView.h */,
+				7C0EE610177A521D00D2B347 /* TitleBarView.m */,
+			);
+			path = TitleBar;
+			sourceTree = "<group>";
+		};
+		7C0EE612177A566100D2B347 /* TitleBar */ = {
+			isa = PBXGroup;
+			children = (
+				7C0EE613177A569900D2B347 /* titlebar_logo.png */,
+				7C0EE614177A569900D2B347 /* titlebar_logo@2x.png */,
+			);
+			path = TitleBar;
 			sourceTree = "<group>";
 		};
 		7C5F43AE1772632700350E2D /* FriendsItems */ = {
@@ -338,6 +363,7 @@
 				7C5F43B2177267A000350E2D /* ItemCell */,
 				D7CDA6F2176222B9000D280A /* Launch */,
 				D7CDA6E1175FC6EA000D280A /* TabView */,
+				7C0EE60E177A51F000D2B347 /* TitleBar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,6 +376,7 @@
 				D7CDA6E9176221EC000D280A /* Launch */,
 				D7C4C2D0175E184C007B65F7 /* Localizations */,
 				7C9024BD1774B1CA00179819 /* TabBar */,
+				7C0EE612177A566100D2B347 /* TitleBar */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -568,6 +595,8 @@
 				7C9024CB1774B24600179819 /* icon_sell@2x.png in Resources */,
 				7C9024CC1774B24600179819 /* icon_sell_highlighted.png in Resources */,
 				7C9024CD1774B24600179819 /* icon_sell_highlighted@2x.png in Resources */,
+				7C0EE615177A569900D2B347 /* titlebar_logo.png in Resources */,
+				7C0EE616177A569900D2B347 /* titlebar_logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +654,7 @@
 				7C5F43C51773D71300350E2D /* DibsClient.m in Sources */,
 				7C9024D01774C57F00179819 /* TabButton.m in Sources */,
 				7C0EE60D177A48AE00D2B347 /* MyItemsController.m in Sources */,
+				7C0EE611177A521D00D2B347 /* TitleBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
