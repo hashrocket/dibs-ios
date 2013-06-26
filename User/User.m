@@ -17,4 +17,8 @@
   return [NSURL URLWithString:self.attributes[@"profile_image_url"]];
 }
 
+-(NSURL*)largeProfileImageURL {
+  return [NSURL URLWithString:self.attributes[@"large_profile_image_url"]];
+}
+
 @end

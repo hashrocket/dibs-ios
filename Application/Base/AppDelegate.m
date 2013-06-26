@@ -36,6 +36,7 @@
   if (!_slideController) {
     _slideController = [[NVSlideMenuController alloc] initWithMenuViewController:[[MenuController alloc] init]
                                                         andContentViewController:[[LaunchController alloc] init]];
+    [_slideController setContentViewWidthWhenMenuIsOpen:85.f];
   }
   return _slideController;
 }

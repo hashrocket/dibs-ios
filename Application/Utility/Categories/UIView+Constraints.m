@@ -18,8 +18,12 @@
                         constant:0.0];
 }
 
+-(void)addEqualityConstraintOn:(NSLayoutAttribute)attribute forSubview:(UIView*)subview constant:(CGFloat)constant {
+  [self addEqualityConstraintFor:self relatedBy:attribute on:subview relatedBy:attribute constant:constant];
+}
+
 -(void)addEqualityConstraintOn:(NSLayoutAttribute)attribute forSubview:(UIView*)subview {
-  [self addEqualityConstraintFor:self relatedBy:attribute on:subview relatedBy:attribute];
+  [self addEqualityConstraintOn:attribute forSubview:subview constant:0];
 }
 
 -(void)addConstraintsWithVisualFormat:(NSString *)format forSubviews:(NSDictionary *)views {

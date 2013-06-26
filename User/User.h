@@ -7,5 +7,6 @@
 -(id)initWithDictionary:(NSDictionary*)attrs;
 -(NSString*)name;
 -(NSURL*)profileImageURL;
+-(NSURL*)largeProfileImageURL;
 
 @end

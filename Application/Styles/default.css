@@ -7,6 +7,24 @@ label {
   background-color: #424242;
 }
 
+#slide_menu button {
+  font-family: Amaranth;
+  font-size: 14px;
+  color: #c7c7c7;
+  background-color: #353535;
+  border-width: 1px;
+  border-color: #606060;
+  image-edge-left-inset: -120;
+  title-edge-left-inset: -100;
+}
+
+#slide_menu label {
+  font-family: Amaranth;
+  font-size: 17px;
+  font-align: center;
+  color: #e8e8e8;
+}
+
 #launch_view {
   background-color: #185ba6;
 }

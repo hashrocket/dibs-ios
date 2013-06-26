@@ -307,8 +307,8 @@
 	CALayer *layer = contentView.layer;
 	layer.masksToBounds = NO;
 	layer.shadowColor = [[UIColor blackColor] CGColor];
-	layer.shadowOpacity = 1.f;
-	layer.shadowRadius = 5.f;
+	layer.shadowOpacity = 0.425f;
+	layer.shadowRadius = 2.5f;
 	layer.shadowPath = [[UIBezierPath bezierPathWithRect:contentView.bounds] CGPath];
 	layer.shadowOffset = [self shadowOffsetAccordingToCurrentSlideDirection];
 }
@@ -325,9 +325,9 @@
 - (CGSize)shadowOffsetAccordingToCurrentSlideDirection
 {
 	if (self.slideDirection == NVSlideMenuControllerSlideFromLeftToRight)
-		return CGSizeMake(-2.5f, 3.f);
+		return CGSizeMake(-2.5f, 0.f);
 	else if (self.slideDirection == NVSlideMenuControllerSlideFromRightToLeft)
-		return CGSizeMake(2.5f, 3.f);
+		return CGSizeMake(2.5f, 0.f);
 	
 	return CGSizeZero;
 }
