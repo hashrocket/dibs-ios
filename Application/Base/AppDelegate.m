@@ -9,6 +9,9 @@
 
 -(NVSlideMenuController*)slideController;
 -(void)toggleSlideMenu:(NSNotification*)notification;
+-(void)invalidateUserSession:(NSNotification*)notification;
+-(void)enableSlideMenuSwipe:(NSNotification*)notification;
+-(void)disableSlideMenuSwipe:(NSNotification*)notification;
 
 @end
 
@@ -18,6 +21,12 @@
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toggleSlideMenu:)
                                                name:SlideMenuShouldToggleState object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enableSlideMenuSwipe:)
+                                               name:SlideMenuShouldEnableSwipe object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(disableSlideMenuSwipe:)
+                                               name:SlideMenuShouldDisableSwipe object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(invalidateUserSession:)
+                                               name:UserSessionShouldBeInvalidated object:nil];
   [self.window setRootViewController:self.slideController];
   [self.window makeKeyAndVisible];
   return YES;
@@ -33,6 +42,20 @@
 
 -(void)toggleSlideMenu:(NSNotification *)notification {
   [self.slideController toggleMenuAnimated:nil];
+}
+
+-(void)invalidateUserSession:(NSNotification *)notification {
+  [[UserDataStore sharedInstance] invalidate];
+  [self.slideController closeMenuBehindContentViewController:[[LaunchController alloc] init]
+                                                    animated:YES completion:nil];
+}
+
+-(void)enableSlideMenuSwipe:(NSNotification *)notification {
+  [self.slideController setPanGestureEnabled:YES];
+}
+
+-(void)disableSlideMenuSwipe:(NSNotification *)notification {
+  [self.slideController setPanGestureEnabled:NO];
 }
 
 #pragma mark - FB Session methods

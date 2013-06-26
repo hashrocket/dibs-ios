@@ -127,4 +127,10 @@ static CGFloat kPadding = 10;
   [self.contentView reloadData];
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+  if ([[UserDataStore sharedInstance] isAuthenticated]) {
+    postNotification(SlideMenuShouldEnableSwipe);
+  }
+}
+
 @end

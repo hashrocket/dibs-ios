@@ -52,7 +52,10 @@
 
 -(void)transitionToTabBarController {
   [UIView animateWithDuration:0.5 animations:^{
+    [self.tabController viewWillAppear:YES];
     [self.launchView setAlpha:0];
+  } completion:^(BOOL finished) {
+    [self.tabController viewDidAppear:YES];
   }];
 }
 
@@ -64,6 +67,12 @@
 
 -(void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+  if ([[UserDataStore sharedInstance] isUnauthenticated]) {
+    postNotification(SlideMenuShouldDisableSwipe);
+  }
 }
 
 @end
