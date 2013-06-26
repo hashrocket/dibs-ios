@@ -61,7 +61,10 @@
 
 -(void)sessionStateDidChange:(NSNotification *)notification {
   if ([[UserDataStore sharedInstance] isAuthenticated]) {
-    [self transitionToTabBarController];
+    [[DibsClient client] getPath:@"validate" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      [self transitionToTabBarController];
+      [[UserDataStore sharedInstance] setUserAttributes:responseObject];
+    } failure:nil];
   }
 }
 

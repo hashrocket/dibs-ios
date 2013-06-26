@@ -1,12 +1,17 @@
 #import "UserDataStore.h"
+#import "User.h"
 
 static NSString *kUserCredentialsKey = @"credentials_key";
 static NSString *kUserAccessTokenKey = @"access_token";
 static NSString *kUserAccessExpiryKey = @"access_token_expiry";
+static NSString *kUserAttributesKey = @"attributes_key";
 
-@interface UserDataStore()
+@interface UserDataStore() {
+  User *_currentUser;
+}
 -(NSUserDefaults*)sharedDefaults;
 -(NSDictionary*)credentialsDictionary;
+-(NSDictionary*)userAttributesDictionary;
 @end
 
 static UserDataStore *sharedInstance = nil;
@@ -25,6 +30,7 @@ static UserDataStore *sharedInstance = nil;
 
 -(void)invalidate {
   [self.sharedDefaults setObject:nil forKey:kUserCredentialsKey];
+  [self.sharedDefaults setObject:nil forKey:kUserAttributesKey];
 }
 
 +(id)sharedInstance {
@@ -35,8 +41,17 @@ static UserDataStore *sharedInstance = nil;
   return sharedInstance;
 }
 
+-(void)setUserAttributes:(NSDictionary *)dict {
+  [self.sharedDefaults setObject:dict forKey:kUserAttributesKey];
+  postNotificationObject(UserDetailsWereAcquired, self.currentUser);
+}
+
 -(NSDictionary*)credentialsDictionary {
   return [self.sharedDefaults objectForKey:kUserCredentialsKey];
+}
+
+-(NSDictionary*)userAttributesDictionary {
+  return [self.sharedDefaults objectForKey:kUserAttributesKey];
 }
 
 -(NSString*)token {
@@ -45,6 +60,10 @@ static UserDataStore *sharedInstance = nil;
 
 -(NSDate*)tokenExpiry {
   return [self.credentialsDictionary valueForKey:kUserAccessExpiryKey];
+}
+
+-(User*)currentUser {
+  return [[User alloc] initWithDictionary:self.userAttributesDictionary];
 }
 
 -(BOOL)tokenIsExpired {

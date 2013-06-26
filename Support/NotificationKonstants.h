@@ -11,3 +11,4 @@ static NSString * const NotificationDomain = @"com.dibs.notification";
 #define SlideMenuShouldEnableSwipe ScopeNotification(@"slideMenuShouldEnableSwipe")
 
 #define UserSessionShouldBeInvalidated ScopeNotification(@"userSessionShouldBeInvalidated")
+#define UserDetailsWereAcquired ScopeNotification(@"userDetailsWereAcquired")
