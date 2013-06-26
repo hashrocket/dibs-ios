@@ -50,7 +50,8 @@ static CGFloat kUserItemPadding = 25.f;
     [_userAvatar.layer setBorderColor:[[UIColor colorWithHexString:@"606060"] CGColor]];
     [_userAvatar.layer setBorderWidth:1.f];
     if ([[UserDataStore sharedInstance] isAuthenticated]) {
-      [_userAvatar setImageWithURL:[self.currentUser largeProfileImageURL]];
+      [_userAvatar setImageWithURL:[self.currentUser largeProfileImageURL]
+                  placeholderImage:[UIImage imageNamed:@"icon_user_menu"]];
     }
   }
   return _userAvatar;
@@ -113,7 +114,8 @@ static CGFloat kUserItemPadding = 25.f;
 }
 
 -(void)didAcquireUserDetails:(NSNotification *)notification {
-  [self.userAvatar setImageWithURL:[self.currentUser largeProfileImageURL]];
+  [self.userAvatar setImageWithURL:[self.currentUser largeProfileImageURL]
+                  placeholderImage:[UIImage imageNamed:@"icon_user_menu"]];
 }
 
 @end

@@ -45,7 +45,8 @@ static CGFloat kIconLength = 23.5f;
   [self.itemImage setImageWithURL:item.primaryImageURL];
   [self.title setText:item.name];
   [self.price setText:item.price];
-  [self.authorIcon setImageWithURL:[item.owner profileImageURL]];
+  [self.authorIcon setImageWithURL:[item.owner profileImageURL]
+                  placeholderImage:[UIImage imageNamed:@"icon_user_menu"]];
   [self.authorName setText:[item.owner name]];
 }
 
