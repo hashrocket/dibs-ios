@@ -2,8 +2,11 @@
 
 @interface TitleBarView() {
   UIImageView *_logoView;
+  UIButton *_slideViewButton;
 }
 -(UIImageView*)logoView;
+-(UIButton*)slideViewButton;
+-(void)didTapSlideViewButton:(id)sender;
 @end
 
 @implementation TitleBarView
@@ -12,6 +15,7 @@
   if (self = [super init]) {
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setStyleId:@"title_bar"];
+    [self addSubview:self.slideViewButton];
     [self addSubview:self.logoView];
     [self setNeedsUpdateConstraints];
   }
@@ -26,10 +30,30 @@
   return _logoView;
 }
 
+-(UIButton*)slideViewButton {
+  if (!_slideViewButton) {
+    _slideViewButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_slideViewButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [_slideViewButton setImage:[UIImage imageNamed:@"icon_menu"] forState:UIControlStateNormal];
+    [_slideViewButton setImage:[UIImage imageNamed:@"icon_menu_highlighted"] forState:UIControlStateHighlighted];
+    [_slideViewButton addTarget:self action:@selector(didTapSlideViewButton:)
+               forControlEvents:UIControlEventTouchUpInside];
+  }
+  return _slideViewButton;
+}
+
+-(void)didTapSlideViewButton:(id)sender {
+  postNotification(SlideMenuShouldToggleState);
+}
+
 -(void)updateConstraints {
   [super updateConstraints];
   [self addEqualityConstraintOn:NSLayoutAttributeCenterX forSubview:self.logoView];
   [self addEqualityConstraintOn:NSLayoutAttributeCenterY forSubview:self.logoView];
+  id views = @{@"slide": self.slideViewButton};
+  id metrics = @{@"padding": @(7), @"width": @(34), @"height": @(30)};
+  [self addConstraintsWithVisualFormat:@"H:|-(padding)-[slide(width)]" forSubviews:views withMetrics:metrics];
+  [self addConstraintsWithVisualFormat:@"V:|-(padding)-[slide(height)]" forSubviews:views withMetrics:metrics];
 }
 
 @end

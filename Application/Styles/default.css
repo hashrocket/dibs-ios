@@ -3,6 +3,10 @@ label {
   background-color: rgba(clear,0);
 }
 
+#slide_menu {
+  background-color: #424242;
+}
+
 #launch_view {
   background-color: #185ba6;
 }

@@ -1,15 +1,38 @@
 #import "AppDelegate.h"
 #import "LaunchController.h"
+#import "MenuController.h"
+#import "NVSlideMenuController.h"
+
+@interface AppDelegate() {
+  NVSlideMenuController *_slideController;
+}
+
+-(NVSlideMenuController*)slideController;
+-(void)toggleSlideMenu:(NSNotification*)notification;
+
+@end
 
 @implementation AppDelegate
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  // Override point for customization after application launch.
-  [self.window setBackgroundColor:[UIColor whiteColor]];
-  [self.window setRootViewController:[[LaunchController alloc] init]];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toggleSlideMenu:)
+                                               name:SlideMenuShouldToggleState object:nil];
+  [self.window setRootViewController:self.slideController];
   [self.window makeKeyAndVisible];
   return YES;
+}
+
+-(NVSlideMenuController*)slideController {
+  if (!_slideController) {
+    _slideController = [[NVSlideMenuController alloc] initWithMenuViewController:[[MenuController alloc] init]
+                                                        andContentViewController:[[LaunchController alloc] init]];
+  }
+  return _slideController;
+}
+
+-(void)toggleSlideMenu:(NSNotification *)notification {
+  [self.slideController toggleMenuAnimated:nil];
 }
 
 #pragma mark - FB Session methods
