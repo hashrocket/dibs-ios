@@ -177,7 +177,7 @@
 
 # Signout Menu
 
-- Background: #424242
+- Background: #545454
 - Width: 470px
 - User
   - Profile picture
@@ -186,7 +186,7 @@
     - 34px Amaranth Regular #e8e8e8
 - Sign Out button
   - 28px Amaranth Regular #c7c7c7
-  - Background: #353535
+  - Background: #444444
   - Border top & bottom: 1px solid #606060
   - Highlighted state
     - Background: #2e2e2e
