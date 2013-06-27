@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
+#import "ItemsController.h"
 
-@interface FriendsItemsController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface FriendsItemsController : ItemsController
 
 @end
