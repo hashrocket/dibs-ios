@@ -40,7 +40,7 @@
   - Color: #ffffff
 - Inactive button
   - Background: #424242
-  - Color: #bababa
+  - Color: #747474
 
 # Index List
 
