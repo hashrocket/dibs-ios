@@ -41,6 +41,7 @@
 		7C9024CC1774B24600179819 /* icon_sell_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9024C41774B24600179819 /* icon_sell_highlighted.png */; };
 		7C9024CD1774B24600179819 /* icon_sell_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9024C51774B24600179819 /* icon_sell_highlighted@2x.png */; };
 		7C9024D01774C57F00179819 /* TabButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9024CF1774C57F00179819 /* TabButton.m */; };
+		7CD0809F177CCC01007D1F30 /* ItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0809E177CCC01007D1F30 /* ItemsController.m */; };
 		999FF7ECA217448D8DC3FD0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF3DA454DF944E59ED06C27 /* libPods.a */; };
 		D755E95D175F886400A23FDE /* UserDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D755E95C175F886400A23FDE /* UserDataStore.m */; };
 		D755E961175FA6CA00A23FDE /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D755E960175FA6CA00A23FDE /* TabBarController.m */; };
@@ -115,6 +116,8 @@
 		7C9024C51774B24600179819 /* icon_sell_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_sell_highlighted@2x.png"; path = "Assets/ui/ios/icon_sell_highlighted@2x.png"; sourceTree = SOURCE_ROOT; };
 		7C9024CE1774C57F00179819 /* TabButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabButton.h; sourceTree = "<group>"; };
 		7C9024CF1774C57F00179819 /* TabButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabButton.m; sourceTree = "<group>"; };
+		7CD0809D177CCC01007D1F30 /* ItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsController.h; sourceTree = "<group>"; };
+		7CD0809E177CCC01007D1F30 /* ItemsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsController.m; sourceTree = "<group>"; };
 		D755E95B175F886400A23FDE /* UserDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataStore.h; sourceTree = "<group>"; };
 		D755E95C175F886400A23FDE /* UserDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataStore.m; sourceTree = "<group>"; };
 		D755E95F175FA6CA00A23FDE /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
@@ -312,6 +315,15 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		7CD0809C177CCBDC007D1F30 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				7CD0809D177CCC01007D1F30 /* ItemsController.h */,
+				7CD0809E177CCC01007D1F30 /* ItemsController.m */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		D755E95A175F886400A23FDE /* UserDataStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				7C5F43AE1772632700350E2D /* FriendsItems */,
+				7CD0809C177CCBDC007D1F30 /* Items */,
 				D7C4C2E2175E2EB2007B65F7 /* Launch */,
 				7C0EE624177A9A3700D2B347 /* Menu */,
 				7C0EE60A177A482200D2B347 /* MyItems */,
@@ -731,6 +744,7 @@
 				7C0EE611177A521D00D2B347 /* TitleBarView.m in Sources */,
 				7C0EE61B177A8B2400D2B347 /* NVSlideMenuController.m in Sources */,
 				7C0EE627177A9B0000D2B347 /* MenuController.m in Sources */,
+				7CD0809F177CCC01007D1F30 /* ItemsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

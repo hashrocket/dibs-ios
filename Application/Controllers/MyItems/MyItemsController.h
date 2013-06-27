@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
+#import "ItemsController.h"
 
-@interface MyItemsController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface MyItemsController : ItemsController
 
 @end
