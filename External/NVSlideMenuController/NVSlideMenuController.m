@@ -303,14 +303,15 @@
 
 - (void)setShadowOnContentView
 {
-	UIView *contentView = self.contentViewController.view;
-	CALayer *layer = contentView.layer;
-	layer.masksToBounds = NO;
-	layer.shadowColor = [[UIColor blackColor] CGColor];
-	layer.shadowOpacity = 0.425f;
-	layer.shadowRadius = 2.5f;
-	layer.shadowPath = [[UIBezierPath bezierPathWithRect:contentView.bounds] CGPath];
-	layer.shadowOffset = [self shadowOffsetAccordingToCurrentSlideDirection];
+  // apply no shadow
+//	UIView *contentView = self.contentViewController.view;
+//	CALayer *layer = contentView.layer;
+//	layer.masksToBounds = NO;
+//	layer.shadowColor = [[UIColor blackColor] CGColor];
+//	layer.shadowOpacity = 0.425f;
+//	layer.shadowRadius = 2.5f;
+//	layer.shadowPath = [[UIBezierPath bezierPathWithRect:contentView.bounds] CGPath];
+//	layer.shadowOffset = [self shadowOffsetAccordingToCurrentSlideDirection];
 }
 
 

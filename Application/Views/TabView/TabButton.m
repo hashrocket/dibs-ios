@@ -73,7 +73,7 @@
 
 -(void)setEnabled:(BOOL)enabled {
   [super setEnabled:enabled];
-  [self setSelected:enabled];
+  [self setSelected:!enabled];
 }
 
 -(void)setSelected:(BOOL)selected {
@@ -83,7 +83,7 @@
     [self.titleLabel setTextColor:[UIColor whiteColor]];
   } else {
     [self setBackgroundColor:[UIColor colorWithHexString:@"424242"]];
-    [self.titleLabel setTextColor:[UIColor colorWithHexString:@"bababa"]];
+    [self.titleLabel setTextColor:[UIColor colorWithHexString:@"747474"]];
   }
 }
 

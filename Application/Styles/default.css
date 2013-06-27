@@ -4,14 +4,14 @@ label {
 }
 
 #slide_menu {
-  background-color: #424242;
+  background-color: #545454;
 }
 
 #slide_menu button {
   font-family: Amaranth;
   font-size: 14px;
   color: #c7c7c7;
-  background-color: #353535;
+  background-color: #444;
   border-width: 1px;
   border-color: #606060;
   image-edge-left-inset: -120;
