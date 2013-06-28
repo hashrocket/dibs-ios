@@ -1,6 +1,5 @@
 #import "TabView.h"
 #import "TabViewDelegate.h"
-#import "TabButton.h"
 
 static CGFloat kTabViewHeight = 64.f;
 
@@ -41,6 +40,12 @@ static CGFloat kTabViewHeight = 64.f;
 -(NSString*)autolayoutHorizontalFormat {
   return [self.buttons reduceWithAccumulator:@"" andIndexedBlock:^id(id acc, id button, NSUInteger index) {
     return strf(@"%@[button%d(==button0)]", acc, index);
+  }];
+}
+
+-(TabButton*)selectedButton {
+  return [self.buttons detect:^BOOL(TabButton *button) {
+    return [button isSelected];
   }];
 }
 
