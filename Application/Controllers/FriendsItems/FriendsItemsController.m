@@ -19,6 +19,7 @@
   [[DibsClient client] getPath:@"theirs" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
     [self setItemsAttributes:responseObject];
     [self setIsLoading:NO];
+    [self.refreshControl endRefreshing];
   } failure:nil];
 }
 

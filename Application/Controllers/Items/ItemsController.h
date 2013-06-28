@@ -7,5 +7,6 @@
 
 -(UICollectionViewFlowLayout*)layout;
 -(UICollectionView*)collectionView;
+-(UIRefreshControl*)refreshControl;
 
 @end

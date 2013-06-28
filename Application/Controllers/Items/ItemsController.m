@@ -7,6 +7,7 @@ static CGFloat kPadding = 10;
 @interface ItemsController () {
   UICollectionViewFlowLayout *_layout;
   UICollectionView *_collectionView;
+  UIRefreshControl *_refreshControl;
 }
 @end
 
@@ -15,6 +16,7 @@ static CGFloat kPadding = 10;
 -(id)init {
   if (self = [super init]) {
     [self.view addSubview:self.collectionView];
+    [self.collectionView addSubview:self.refreshControl];
     [self.view setNeedsUpdateConstraints];
   }
   return self;
@@ -23,6 +25,17 @@ static CGFloat kPadding = 10;
 -(void)setItemsAttributes:(NSArray *)itemsAttributes {
   [self setItems:[Item parse:itemsAttributes]];
   [self.collectionView reloadData];
+}
+
+-(UIRefreshControl*)refreshControl {
+  if (!_refreshControl) {
+    _refreshControl = [[UIRefreshControl alloc] init];
+    [_refreshControl setTintColor:[UIColor colorWithHexString:@"353535"]];
+    [_refreshControl addTarget:self action:@selector(loadItems)
+              forControlEvents:UIControlEventValueChanged];
+    [_refreshControl.layer setOpacity:0.75];
+  }
+  return _refreshControl;
 }
 
 -(UICollectionViewFlowLayout*)layout {
