@@ -4,7 +4,6 @@ static NSString * const NotificationDomain = @"com.dibs.notification";
 [NSString stringWithFormat:@"%@:%@",NotificationDomain,notificationString]
 
 #define FBSessionStateChangedNotification ScopeNotification(@"fbSessionStateChangedNotification")
-#define TabBarContentControllerWasInvalidated ScopeNotification(@"didInvalidateContentController")
 
 #define SlideMenuShouldToggleState ScopeNotification(@"slideMenuShouldToggleState")
 #define SlideMenuShouldDisableSwipe ScopeNotification(@"slideMenuShouldDisableSwipe")

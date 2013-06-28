@@ -17,7 +17,6 @@
 -(void)loadItems {
   [[DibsClient client] getPath:@"mine" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
     [self setItemsAttributes:responseObject];
-    postNotification(TabBarContentControllerWasInvalidated);
   } failure:nil];
 }
 

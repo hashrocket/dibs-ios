@@ -1,28 +1,27 @@
 #import "TabBarController.h"
 #import "TabView.h"
 #import "TitleBarView.h"
+#import "ContentContainerController.h"
 #import "FriendsItemsController.h"
 #import "MyItemsController.h"
 #import "ItemCell.h"
 
-static CGFloat kPadding = 10;
-
 @interface TabBarController () {
   TabView *_tabView;
   TitleBarView *_titleBarView;
-  UICollectionViewFlowLayout *_layout;
-  UICollectionView *_contentView;
+  ContentContainerController *_contentContainerController;
   FriendsItemsController *_friendsItemsController;
   MyItemsController *_myItemsController;
 }
+
 -(TabView*)tabView;
 -(TitleBarView*)titleBarView;
--(UICollectionViewFlowLayout*)layout;
--(UICollectionView*)contentView;
+-(UIView*)contentView;
+-(ContentContainerController*)contentContainerController;
 -(FriendsItemsController*)friendsItemsController;
 -(MyItemsController*)myItemsController;
--(UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>*)controllerForIndex:(NSInteger)index;
--(void)didInvalidateContent:(NSNotification*)notification;
+-(UIViewController*)controllerForIndex:(NSInteger)index;
+
 @end
 
 @implementation TabBarController
@@ -38,10 +37,6 @@ static CGFloat kPadding = 10;
     [self.tabView selectButtonAtIndex:0];
     [self.view addSubview:self.contentView];
     [self.view setNeedsUpdateConstraints];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didInvalidateContent:)
-                                                 name:TabBarContentControllerWasInvalidated
-                                               object:nil];
   }
   return self;
 }
@@ -60,21 +55,15 @@ static CGFloat kPadding = 10;
   return _titleBarView;
 }
 
--(UICollectionViewFlowLayout*)layout {
-  if (!_layout) {
-    _layout = [[UICollectionViewFlowLayout alloc] init];
-    [_layout setSectionInset:UIEdgeInsetsMake(kPadding, 0, kPadding, 0)];
-  }
-  return _layout;
+-(UIView*)contentView {
+  return self.contentContainerController.view;
 }
 
--(UICollectionView*)contentView {
-  if (!_contentView) {
-    _contentView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.layout];
-    [_contentView registerClass:[ItemCell class] forCellWithReuseIdentifier:@"ItemCell"];
-    [_contentView setTranslatesAutoresizingMaskIntoConstraints:NO];
+-(ContentContainerController*)contentContainerController {
+  if (!_contentContainerController) {
+    _contentContainerController = [[ContentContainerController alloc] init];
   }
-  return _contentView;
+  return _contentContainerController;
 }
 
 -(FriendsItemsController*)friendsItemsController {
@@ -91,7 +80,7 @@ static CGFloat kPadding = 10;
   return _myItemsController;
 }
 
--(UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>*)controllerForIndex:(NSInteger)index {
+-(UIViewController*)controllerForIndex:(NSInteger)index {
   return @[self.friendsItemsController,self.myItemsController][index];
 }
 
@@ -118,13 +107,7 @@ static CGFloat kPadding = 10;
 }
 
 -(void)didTapButtonAtIndex:(NSInteger)index {
-  [self.contentView setDataSource:[self controllerForIndex:index]];
-  [self.contentView setDelegate:[self controllerForIndex:index]];
-  [self.contentView reloadData];
-}
-
--(void)didInvalidateContent:(NSNotification *)notification {
-  [self.contentView reloadData];
+  [self.contentContainerController setContentViewController:[self controllerForIndex:index]];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
