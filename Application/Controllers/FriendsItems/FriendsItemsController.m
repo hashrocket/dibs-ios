@@ -1,5 +1,4 @@
 #import "FriendsItemsController.h"
-#import "ItemCell.h"
 
 @interface FriendsItemsController ()
 -(void)loadItems;

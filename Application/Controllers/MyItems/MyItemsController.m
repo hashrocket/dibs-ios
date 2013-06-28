@@ -1,5 +1,4 @@
 #import "MyItemsController.h"
-#import "Item.h"
 
 @interface MyItemsController()
 -(void)loadItems;
