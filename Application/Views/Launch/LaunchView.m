@@ -1,5 +1,4 @@
 #import "LaunchView.h"
-#import "AppDelegate.h"
 
 @interface LaunchView() {
   UIView *_wrapper;
@@ -10,22 +9,19 @@
 -(UIImageView*)dibsLogo;
 -(UILabel*)slogan;
 -(UIButton*)connectButton;
--(void)didTapConnect:(id)sender;
 -(UIView*)wrapper;
 @end
 
 @implementation LaunchView
 
--(id)init {
+-(id)initWithDelegate:(UIViewController *)delegate {
   if (self = [super init]) {
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setDelegate:delegate];
     [self addSubview:self.wrapper];
     [self.wrapper addSubview:self.dibsLogo];
     [self.wrapper addSubview:self.slogan];
     [self.wrapper addSubview:self.connectButton];
-    if ([[UserDataStore sharedInstance] isAuthenticated]) {
-      [self.connectButton setEnabled:NO];
-    }
   }
   return self;
 }
@@ -61,7 +57,7 @@
     _connectButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_connectButton setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_connectButton setImage:[UIImage imageNamed:@"icon_f"] forState:UIControlStateNormal];
-    [_connectButton addTarget:self action:@selector(didTapConnect:)
+    [_connectButton addTarget:self.delegate action:@selector(didTapConnect:)
              forControlEvents:UIControlEventTouchUpInside];
     [_connectButton setTitle:NSLocalizedString(@"button.connect", nil)
                     forState:UIControlStateNormal];
@@ -69,9 +65,8 @@
   return _connectButton;
 }
 
--(void)didTapConnect:(id)sender {
-  AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-  [delegate openSessionWithAllowLoginUI:YES];
+-(void)setEnabled:(BOOL)enabled {
+  [self.connectButton setEnabled:enabled];
 }
 
 -(void)updateConstraints {

@@ -1,6 +1,7 @@
 #import "LaunchController.h"
 #import "LaunchView.h"
 #import "TabBarController.h"
+#import "AppDelegate.h"
 
 @interface LaunchController () {
   TabBarController *_tabController;
@@ -29,8 +30,11 @@
 
 -(LaunchView*)launchView {
   if (!_launchView) {
-    _launchView = [[LaunchView alloc] init];
+    _launchView = [[LaunchView alloc] initWithDelegate:self];
     [_launchView setStyleId:@"launch_view"];
+    if ([[UserDataStore sharedInstance] isAuthenticated]) {
+      [_launchView setEnabled:NO];
+    }
   }
   return _launchView;
 }
@@ -76,6 +80,12 @@
   if ([[UserDataStore sharedInstance] isUnauthenticated]) {
     postNotification(SlideMenuShouldDisableSwipe);
   }
+}
+
+-(void)didTapConnect:(id)sender {
+  [sender setEnabled:NO];
+  AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+  [delegate openSessionWithAllowLoginUI:YES];
 }
 
 @end
