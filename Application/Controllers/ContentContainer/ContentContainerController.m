@@ -21,6 +21,7 @@
   // add new view controller
   [controller willMoveToParentViewController:self];
   [self addChildViewController:controller];
+  [controller.view setFrame:self.view.bounds];
   [self.view addSubview:controller.view];
   [controller didMoveToParentViewController:self];
 }
