@@ -7,7 +7,7 @@
 
 @implementation MyItemsController
 
-- (id)init {
+-(id)init {
   if (self = [super init]) {
     [self loadItems];
   }
@@ -15,10 +15,17 @@
 }
 
 -(void)loadItems {
+  if (self.isLoading) return;
+  [self setIsLoading:YES];
   [[DibsClient client] getPath:@"mine" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
     [self setItemsAttributes:responseObject];
+    [self setIsLoading:NO];
   } failure:nil];
 }
 
+-(void)didMoveToParentViewController:(UIViewController *)parent {
+  [super didMoveToParentViewController:parent];
+  if (!self.items) [self loadItems];
+}
 
 @end

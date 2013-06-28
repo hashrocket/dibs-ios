@@ -8,7 +8,6 @@ static CGFloat kPadding = 10;
   UICollectionViewFlowLayout *_layout;
   UICollectionView *_collectionView;
 }
-
 @end
 
 @implementation ItemsController
