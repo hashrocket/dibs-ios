@@ -6,13 +6,6 @@
 
 @implementation FriendsItemsController
 
--(id)init {
-  if (self = [super init]) {
-    [self loadItems];
-  }
-  return self;
-}
-
 -(void)loadItems {
   if (self.isLoading) return;
   [self setIsLoading:YES];
@@ -25,7 +18,7 @@
 
 -(void)didMoveToParentViewController:(UIViewController *)parent {
   [super didMoveToParentViewController:parent];
-  if (!self.items) [self loadItems];
+  if (!self.items || [self.items count] == 0) [self loadItems];
 }
 
 @end

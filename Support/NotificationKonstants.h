@@ -3,6 +3,7 @@ static NSString * const NotificationDomain = @"com.dibs.notification";
 #define ScopeNotification(notificationString) \
 [NSString stringWithFormat:@"%@:%@",NotificationDomain,notificationString]
 
+#define FBSessionDidRequestSessionNotification ScopeNotification(@"fbSessionDidRequestSessionNotification")
 #define FBSessionStateChangedNotification ScopeNotification(@"fbSessionStateChangedNotification")
 
 #define SlideMenuShouldToggleState ScopeNotification(@"slideMenuShouldToggleState")

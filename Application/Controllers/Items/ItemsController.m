@@ -9,6 +9,7 @@ static CGFloat kPadding = 10;
   UICollectionView *_collectionView;
   UIRefreshControl *_refreshControl;
 }
+-(void)invalidateData;
 @end
 
 @implementation ItemsController
@@ -18,6 +19,10 @@ static CGFloat kPadding = 10;
     [self.view addSubview:self.collectionView];
     [self.collectionView addSubview:self.refreshControl];
     [self.view setNeedsUpdateConstraints];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(invalidateData)
+                                                 name:UserSessionShouldBeInvalidated
+                                               object:nil];
   }
   return self;
 }
@@ -25,6 +30,10 @@ static CGFloat kPadding = 10;
 -(void)setItemsAttributes:(NSArray *)itemsAttributes {
   [self setItems:[Item parse:itemsAttributes]];
   [self.collectionView reloadData];
+}
+
+-(void)invalidateData {
+  [self setItemsAttributes:[NSArray array]];
 }
 
 -(UIRefreshControl*)refreshControl {

@@ -1,7 +1,7 @@
 #import "TabBarController.h"
 #import "TabView.h"
 #import "TitleBarView.h"
-#import "ContentContainerController.h"
+#import "ContainerController.h"
 #import "FriendsItemsController.h"
 #import "MyItemsController.h"
 #import "ItemCell.h"
@@ -9,7 +9,7 @@
 @interface TabBarController () {
   TabView *_tabView;
   TitleBarView *_titleBarView;
-  ContentContainerController *_contentContainerController;
+  ContainerController *_containerController;
   FriendsItemsController *_friendsItemsController;
   MyItemsController *_myItemsController;
 }
@@ -17,7 +17,7 @@
 -(TabView*)tabView;
 -(TitleBarView*)titleBarView;
 -(UIView*)contentView;
--(ContentContainerController*)contentContainerController;
+-(ContainerController*)containerController;
 -(FriendsItemsController*)friendsItemsController;
 -(MyItemsController*)myItemsController;
 -(UIViewController*)controllerForIndex:(NSInteger)index;
@@ -29,12 +29,10 @@
 -(id)init {
   if (self = [super init]) {
     [self.view setStyleId:@"tab_container"];
-    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.titleBarView];
     [self.view addSubview:self.tabView];
     [self.tabView addButton:@"Buy" withIconNamed:@"icon_buy"];
     [self.tabView addButton:@"Sell" withIconNamed:@"icon_sell"];
-    [self.tabView selectButtonAtIndex:0];
     [self.view addSubview:self.contentView];
     [self.view setNeedsUpdateConstraints];
   }
@@ -56,14 +54,14 @@
 }
 
 -(UIView*)contentView {
-  return self.contentContainerController.view;
+  return self.containerController.view;
 }
 
--(ContentContainerController*)contentContainerController {
-  if (!_contentContainerController) {
-    _contentContainerController = [[ContentContainerController alloc] init];
+-(ContainerController*)containerController {
+  if (!_containerController) {
+    _containerController = [[ContainerController alloc] init];
   }
-  return _contentContainerController;
+  return _containerController;
 }
 
 -(FriendsItemsController*)friendsItemsController {
@@ -86,6 +84,7 @@
 
 -(void)updateViewConstraints {
   [super updateViewConstraints];
+
   [self.view addEqualityConstraintOn:NSLayoutAttributeTop forSubview:self.titleBarView];
   [self.view addEqualityConstraintOn:NSLayoutAttributeLeft forSubview:self.titleBarView];
   [self.view addEqualityConstraintOn:NSLayoutAttributeRight forSubview:self.titleBarView];
@@ -107,12 +106,13 @@
 }
 
 -(void)didTapButtonAtIndex:(NSInteger)index {
-  [self.contentContainerController setContentViewController:[self controllerForIndex:index]];
+  [self.containerController setContentViewController:[self controllerForIndex:index]];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
   if ([[UserDataStore sharedInstance] isAuthenticated]) {
     postNotification(SlideMenuShouldEnableSwipe);
+    [self.tabView selectButtonAtIndex:0];
   }
 }
 

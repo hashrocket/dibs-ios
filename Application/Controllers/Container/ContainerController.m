@@ -1,6 +1,6 @@
-#import "ContentContainerController.h"
+#import "ContainerController.h"
 
-@implementation ContentContainerController
+@implementation ContainerController
 
 -(id)init {
   if (self = [super init]) {

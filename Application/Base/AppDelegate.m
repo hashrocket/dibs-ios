@@ -1,17 +1,24 @@
 #import "AppDelegate.h"
-#import "LaunchController.h"
 #import "MenuController.h"
+#import "ContentController.h"
 #import "NVSlideMenuController.h"
 
 @interface AppDelegate() {
+  MenuController *_menuController;
+  ContentController *_contentController;
   NVSlideMenuController *_slideController;
 }
 
+-(MenuController*)menuController;
+-(ContentController*)contentController;
 -(NVSlideMenuController*)slideController;
+
 -(void)toggleSlideMenu:(NSNotification*)notification;
 -(void)invalidateUserSession:(NSNotification*)notification;
 -(void)enableSlideMenuSwipe:(NSNotification*)notification;
 -(void)disableSlideMenuSwipe:(NSNotification*)notification;
+
+-(BOOL)openSessionWithAllowLoginUI;
 
 @end
 
@@ -27,15 +34,33 @@
                                                name:SlideMenuShouldDisableSwipe object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(invalidateUserSession:)
                                                name:UserSessionShouldBeInvalidated object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openSessionWithAllowLoginUI)
+                                               name:FBSessionDidRequestSessionNotification
+                                             object:nil];
+
   [self.window setRootViewController:self.slideController];
   [self.window makeKeyAndVisible];
   return YES;
 }
 
+-(MenuController*)menuController {
+  if (!_menuController) {
+    _menuController = [[MenuController alloc] init];
+  }
+  return _menuController;
+}
+
+-(ContentController*)contentController {
+  if (!_contentController) {
+    _contentController = [[ContentController alloc] init];
+  }
+  return _contentController;
+}
+
 -(NVSlideMenuController*)slideController {
   if (!_slideController) {
-    _slideController = [[NVSlideMenuController alloc] initWithMenuViewController:[[MenuController alloc] init]
-                                                        andContentViewController:[[LaunchController alloc] init]];
+    _slideController = [[NVSlideMenuController alloc] initWithMenuViewController:self.menuController
+                                                        andContentViewController:self.contentController];
     [_slideController setContentViewWidthWhenMenuIsOpen:85.f];
   }
   return _slideController;
@@ -47,7 +72,7 @@
 
 -(void)invalidateUserSession:(NSNotification *)notification {
   [[UserDataStore sharedInstance] invalidate];
-  [self.slideController closeMenuBehindContentViewController:[[LaunchController alloc] init]
+  [self.slideController closeMenuBehindContentViewController:self.contentController
                                                     animated:YES completion:nil];
 }
 
@@ -84,8 +109,8 @@
   }
 }
 
--(BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI {
-  return [FBSession openActiveSessionWithReadPermissions:@[@"email"] allowLoginUI:allowLoginUI completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+-(BOOL)openSessionWithAllowLoginUI {
+  return [FBSession openActiveSessionWithReadPermissions:@[@"email"] allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
     [self sessionStateChanged:session state:status error:error];
   }];
 }
