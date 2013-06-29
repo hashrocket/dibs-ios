@@ -9,6 +9,8 @@
 -(void)loadItems {
   if (self.isLoading) return;
   [self setIsLoading:YES];
+  [self.collectionView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:YES];
+  [self.refreshControl beginRefreshing];
   [[DibsClient client] getPath:@"mine" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
     [self setItemsAttributes:responseObject];
     [self setIsLoading:NO];
