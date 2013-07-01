@@ -6,6 +6,7 @@
 @interface ItemCell : UICollectionViewCell
 
 -(void)setItem:(Item*)item;
+-(void)setDibInfoText:(NSString*)infoText;
 
 -(UIImageView*)itemImage;
 -(UILabel*)title;

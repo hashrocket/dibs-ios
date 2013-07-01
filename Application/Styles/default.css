@@ -70,6 +70,18 @@ label {
   border-width: 1px;
 }
 
+#tab_container collection-view-cell.item_cell .dib_dot {
+  background-color: #185ba6;
+  border-radius: 28px;
+}
+
+#tab_container collection-view-cell.item_cell .dib_dot label {
+  color: white;
+  font-align: center;
+  font-style: bold;
+  font-size: 13px;
+}
+
 #tab_container collection-view-cell label.item_title {
   font-weight: bold;
   color: #185ba6;

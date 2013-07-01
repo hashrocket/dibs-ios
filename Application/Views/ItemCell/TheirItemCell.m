@@ -29,6 +29,9 @@ static CGFloat kIconLength = 23.5f;
   [self.authorIcon setImageWithURL:[item.owner profileImageURL]
                   placeholderImage:[UIImage imageNamed:@"icon_user_menu"]];
   [self.authorName setText:[item.owner name]];
+  if (item.dibbedByLoggedInUser) {
+    [self setDibInfoText:@"Dibbed"];
+  }
 }
 
 -(UIImageView*)authorIcon {
