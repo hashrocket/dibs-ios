@@ -1,5 +1,5 @@
 #import "MyItemsController.h"
-#import "ItemCell.h"
+#import "MyItemCell.h"
 
 @interface MyItemsController()
 -(void)loadItems;
@@ -9,7 +9,7 @@
 
 -(id)init {
   if (self = [super init]) {
-    [self.collectionView registerClass:[ItemCell class] forCellWithReuseIdentifier:@"ItemCell"];
+    [self.collectionView registerClass:[MyItemCell class] forCellWithReuseIdentifier:@"ItemCell"];
   }
   return self;
 }

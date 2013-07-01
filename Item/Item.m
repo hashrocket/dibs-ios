@@ -1,10 +1,14 @@
 #import "Item.h"
 #import "User.h"
+#import <ISO8601DateFormatter/ISO8601DateFormatter.h>
 
 @interface Item() {
   NSArray *_imageURLs;
   User *_owner;
+  ISO8601DateFormatter *_dateFormatter;
 }
+
+-(ISO8601DateFormatter*)dateFormatter;
 
 @end
 
@@ -49,6 +53,17 @@
     _owner = [[User alloc] initWithDictionary:self.attributes[@"user"]];
   }
   return _owner;
+}
+
+-(ISO8601DateFormatter*)dateFormatter {
+  if (!_dateFormatter) {
+    _dateFormatter = [ISO8601DateFormatter new];
+  }
+  return _dateFormatter;
+}
+
+-(NSDate*)dateListed {
+  return [self.dateFormatter dateFromString:self.attributes[@"listed_at"]];
 }
 
 -(BOOL)dibbedByLoggedInUser {

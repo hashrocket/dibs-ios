@@ -87,3 +87,8 @@ label {
   border-color: #d6d6d6;
   border-width: 1px;
 }
+
+#tab_container collection-view-cell view.metadata_container label {
+  font-size: 13px;
+  color: #757575;
+}

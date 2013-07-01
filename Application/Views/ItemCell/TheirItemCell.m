@@ -18,7 +18,6 @@ static CGFloat kIconLength = 23.5f;
 
 -(id)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:frame]) {
-    
     [self.container addSubview:self.authorIcon];
     [self.container addSubview:self.authorName];
   }

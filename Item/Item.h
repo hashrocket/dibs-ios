@@ -15,6 +15,7 @@
 -(NSString*)name;
 -(NSString*)price;
 -(User*)owner;
+-(NSDate*)dateListed;
 
 -(BOOL)dibbedByLoggedInUser;
 
