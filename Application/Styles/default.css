@@ -81,7 +81,7 @@ label {
   font-size: 16px;
 }
 
-#tab_container collection-view-cell view.author_container {
+#tab_container collection-view-cell view.metadata_container {
   background-color: #f6f6f6;
   border-radius: 0 0 5px 5px;
   border-color: #d6d6d6;

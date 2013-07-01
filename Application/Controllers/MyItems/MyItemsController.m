@@ -1,10 +1,18 @@
 #import "MyItemsController.h"
+#import "ItemCell.h"
 
 @interface MyItemsController()
 -(void)loadItems;
 @end
 
 @implementation MyItemsController
+
+-(id)init {
+  if (self = [super init]) {
+    [self.collectionView registerClass:[ItemCell class] forCellWithReuseIdentifier:@"ItemCell"];
+  }
+  return self;
+}
 
 -(void)loadItems {
   if (self.isLoading) return;

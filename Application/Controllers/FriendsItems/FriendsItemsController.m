@@ -1,10 +1,18 @@
 #import "FriendsItemsController.h"
+#import "TheirItemCell.h"
 
 @interface FriendsItemsController ()
 -(void)loadItems;
 @end
 
 @implementation FriendsItemsController
+
+-(id)init {
+  if (self = [super init]) {
+    [self.collectionView registerClass:[TheirItemCell class] forCellWithReuseIdentifier:@"ItemCell"];
+  }
+  return self;
+}
 
 -(void)loadItems {
   if (self.isLoading) return;

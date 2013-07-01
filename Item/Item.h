@@ -16,4 +16,6 @@
 -(NSString*)price;
 -(User*)owner;
 
+-(BOOL)dibbedByLoggedInUser;
+
 @end

@@ -58,7 +58,6 @@ static CGFloat kPadding = 10;
 -(UICollectionView*)collectionView {
   if (!_collectionView) {
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.layout];
-    [_collectionView registerClass:[ItemCell class] forCellWithReuseIdentifier:@"ItemCell"];
     [_collectionView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_collectionView setDataSource:self];
     [_collectionView setDelegate:self];

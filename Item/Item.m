@@ -51,4 +51,8 @@
   return _owner;
 }
 
+-(BOOL)dibbedByLoggedInUser {
+  return [self.attributes[@"dibbed"] boolValue];
+}
+
 @end
