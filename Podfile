@@ -6,3 +6,4 @@ inhibit_all_warnings!
 pod 'AFNetworking'
 pod 'Facebook-iOS-SDK'
 pod 'Funcussion'
+pod 'ISO8601DateFormatter'
