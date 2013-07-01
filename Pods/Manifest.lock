@@ -3,17 +3,20 @@ PODS:
   - Facebook-iOS-SDK (3.5.1)
   - Funcussion (0.1.1)
   - ISO8601DateFormatter (0.6)
+  - NSDate+TimeAgo (1.0.1)
 
 DEPENDENCIES:
   - AFNetworking
   - Facebook-iOS-SDK
   - Funcussion
   - ISO8601DateFormatter
+  - NSDate+TimeAgo
 
 SPEC CHECKSUMS:
   AFNetworking: e528f20d06b1b818c3571266fb5efa20031a8ace
   Facebook-iOS-SDK: 0dbd897e842cefeb012ec2eb8eba659ba6b96b12
   Funcussion: f8383c7db59d37a4f6c75e787e6e41e1b0d2a792
   ISO8601DateFormatter: 077ce9d8cfba171bc1ced6cba0d2ae4aefab7619
+  NSDate+TimeAgo: 9f2645b728dbdede6848f4cd1c405b5c8106618c
 
 COCOAPODS: 0.20.2
