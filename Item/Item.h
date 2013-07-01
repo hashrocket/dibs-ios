@@ -17,6 +17,7 @@
 -(User*)owner;
 -(NSDate*)dateListed;
 
+-(NSUInteger)dibCount;
 -(BOOL)dibbedByLoggedInUser;
 
 @end

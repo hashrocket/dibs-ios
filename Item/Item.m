@@ -66,6 +66,10 @@
   return [self.dateFormatter dateFromString:self.attributes[@"listed_at"]];
 }
 
+-(NSUInteger)dibCount {
+  return [self.attributes[@"dib_count"] unsignedIntegerValue];
+}
+
 -(BOOL)dibbedByLoggedInUser {
   return [self.attributes[@"dibbed"] boolValue];
 }

@@ -1,2 +1,4 @@
 "button.connect" = "Sign in with Facebook";
 "label.slogan" = "Online classifieds\nwithout the strangers";
+"%d Dib (plural rule: one)" = "Dib";
+"%d Dib (plural rule: other)" = "Dibs";

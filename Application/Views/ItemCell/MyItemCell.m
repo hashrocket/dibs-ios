@@ -1,5 +1,6 @@
 #import "MyItemCell.h"
 #import <NSDate+TimeAgo/NSDate+TimeAgo.h>
+#import <TTTLocalizedPluralString/TTTLocalizedPluralString.h>
 
 @interface MyItemCell() {
   UILabel *_dateListedLabel;
@@ -21,7 +22,8 @@
 -(void)setItem:(Item *)item {
   [super setItem:item];
   [self.dateListedLabel setText:strf(@"Listed %@",[[item.dateListed timeAgo] lowercaseString])];
-  
+  NSString *formattedCountString = strf(@"%u\n%@", item.dibCount, TTTLocalizedPluralString(item.dibCount, @"Dib", nil));
+  [self setDibInfoText:formattedCountString];
 }
 
 -(UILabel*)dateListedLabel {
