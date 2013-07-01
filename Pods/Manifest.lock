@@ -4,6 +4,7 @@ PODS:
   - Funcussion (0.1.1)
   - ISO8601DateFormatter (0.6)
   - NSDate+TimeAgo (1.0.1)
+  - TTTLocalizedPluralString (0.0.4)
 
 DEPENDENCIES:
   - AFNetworking
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - Funcussion
   - ISO8601DateFormatter
   - NSDate+TimeAgo
+  - TTTLocalizedPluralString
 
 SPEC CHECKSUMS:
   AFNetworking: e528f20d06b1b818c3571266fb5efa20031a8ace
@@ -18,5 +20,6 @@ SPEC CHECKSUMS:
   Funcussion: f8383c7db59d37a4f6c75e787e6e41e1b0d2a792
   ISO8601DateFormatter: 077ce9d8cfba171bc1ced6cba0d2ae4aefab7619
   NSDate+TimeAgo: 9f2645b728dbdede6848f4cd1c405b5c8106618c
+  TTTLocalizedPluralString: 183b3b820813b0dacf8b34121966de4c999921bd
 
 COCOAPODS: 0.20.2

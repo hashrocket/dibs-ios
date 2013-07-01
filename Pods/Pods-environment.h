@@ -36,3 +36,9 @@
 #define COCOAPODS_VERSION_MINOR_NSDate_TimeAgo 0
 #define COCOAPODS_VERSION_PATCH_NSDate_TimeAgo 1
 
+// TTTLocalizedPluralString
+#define COCOAPODS_POD_AVAILABLE_TTTLocalizedPluralString
+#define COCOAPODS_VERSION_MAJOR_TTTLocalizedPluralString 0
+#define COCOAPODS_VERSION_MINOR_TTTLocalizedPluralString 0
+#define COCOAPODS_VERSION_PATCH_TTTLocalizedPluralString 4
+
