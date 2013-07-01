@@ -60,6 +60,9 @@
 - Dibbed/Number of Dibs circle notification
   - Background: #185ba6
   - 26px Amaranth Bold #ffffff
+- Image placeholder
+  - Background: #dedede
+  - Icon placement: center
 
 # Item Show
 
