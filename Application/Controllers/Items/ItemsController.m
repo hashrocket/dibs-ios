@@ -61,6 +61,7 @@ static CGFloat kPadding = 10;
     [_collectionView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_collectionView setDataSource:self];
     [_collectionView setDelegate:self];
+    [_collectionView setAlwaysBounceVertical:YES];
   }
   return _collectionView;
 }
