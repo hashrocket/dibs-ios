@@ -35,7 +35,8 @@ static CGFloat dibDotLength = 55.f;
 }
 
 -(void)setItem:(Item *)item {
-  [self.itemImage setImageWithURL:item.primaryImageURL];
+  [self.itemImage setImageWithURL:item.primaryImageURL
+                 placeholderImage:[UIImage imageNamed:@"icon_item_placeholder"]];
   [self.title setText:item.name];
   [self.price setText:item.price];
 }
