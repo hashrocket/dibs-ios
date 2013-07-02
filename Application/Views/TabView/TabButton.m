@@ -4,10 +4,8 @@
   UILabel *_titleLabel;
   UIImageView *_iconView;
   NSString *_highlightedIconName;
-  UIView *_container;
 }
 -(id)initWithTitle:(NSString*)title andIconName:(NSString*)iconName;
--(UIView*)container;
 @end
 
 @implementation TabButton
@@ -26,9 +24,8 @@
     [self setIconName:iconName];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setStyleClass:@"tab_button"];
-    [self addSubview:self.container];
-    [self.container addSubview:self.titleLabel];
-    [self.container addSubview:self.iconView];
+    [self addSubview:self.titleLabel];
+    [self addSubview:self.iconView];
     [self setNeedsUpdateConstraints];
   }
   return self;
@@ -45,14 +42,6 @@
   _highlightedIconName = highlightedIconName;
 }
 
--(UIView*)container {
-  if (!_container) {
-    _container = [[UIView alloc] init];
-    [_container setTranslatesAutoresizingMaskIntoConstraints:NO];
-  }
-  return _container;
-}
-
 -(UILabel*)titleLabel {
   if (!_titleLabel) {
     _titleLabel = [[UILabel alloc] init];
@@ -66,6 +55,7 @@
   if (!_iconView) {
     _iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.iconName]
                                   highlightedImage:[UIImage imageNamed:self.highlightedIconName]];
+    [_iconView setContentMode:UIViewContentModeCenter];
     [_iconView setTranslatesAutoresizingMaskIntoConstraints:NO];
   }
   return _iconView;
@@ -79,11 +69,11 @@
 -(void)setSelected:(BOOL)selected {
   [self.iconView setHighlighted:selected];
   if (selected) {
-    [self setBackgroundColor:[UIColor colorWithHexString:@"353535"]];
+    [self setBackgroundColor:[UIColor colorWithHexString:@"4f88c9"]];
     [self.titleLabel setTextColor:[UIColor whiteColor]];
   } else {
-    [self setBackgroundColor:[UIColor colorWithHexString:@"424242"]];
-    [self.titleLabel setTextColor:[UIColor colorWithHexString:@"747474"]];
+    [self setBackgroundColor:[UIColor colorWithHexString:@"2c68ac"]];
+    [self.titleLabel setTextColor:[UIColor colorWithHexString:@"00336c"]];
   }
 }
 
@@ -93,12 +83,14 @@
 
 -(void)updateConstraints {
   [super updateConstraints];
-  [self addEqualityConstraintOn:NSLayoutAttributeCenterX forSubview:self.container];
-  [self addEqualityConstraintOn:NSLayoutAttributeCenterY forSubview:self.container];
-  [self.container addEqualityConstraintOn:NSLayoutAttributeCenterX forSubview:self.titleLabel];
-  [self.container addEqualityConstraintOn:NSLayoutAttributeCenterX forSubview:self.iconView];
-  [self.container addEqualityConstraintFor:self.titleLabel relatedBy:NSLayoutAttributeTop
-                                        on:self.iconView relatedBy:NSLayoutAttributeBottom];
+  [self addConstraintsWithVisualFormat:@"V:[icon(height)]"
+                           forSubviews:@{@"icon": self.iconView}
+                           withMetrics:@{@"height": @(27)}];
+  [self addEqualityConstraintOn:NSLayoutAttributeCenterX forSubview:self.titleLabel];
+  [self addEqualityConstraintOn:NSLayoutAttributeCenterX forSubview:self.iconView];
+  [self addEqualityConstraintOn:NSLayoutAttributeTop forSubview:self.iconView constant:-10.f];
+  [self addEqualityConstraintFor:self.titleLabel relatedBy:NSLayoutAttributeTop
+                              on:self.iconView relatedBy:NSLayoutAttributeBottom];
 }
 
 @end
