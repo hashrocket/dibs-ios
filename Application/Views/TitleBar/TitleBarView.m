@@ -1,4 +1,5 @@
 #import "TitleBarView.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface TitleBarView() {
   UIImageView *_logoView;
@@ -34,8 +35,7 @@
   if (!_slideViewButton) {
     _slideViewButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_slideViewButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [_slideViewButton setImage:[UIImage imageNamed:@"icon_menu"] forState:UIControlStateNormal];
-    [_slideViewButton setImage:[UIImage imageNamed:@"icon_menu_highlighted"] forState:UIControlStateHighlighted];
+    [_slideViewButton setImage:[UIImage imageNamed:@"icon_user_button"] forState:UIControlStateNormal];
     [_slideViewButton addTarget:self action:@selector(didTapSlideViewButton:)
                forControlEvents:UIControlEventTouchUpInside];
   }
