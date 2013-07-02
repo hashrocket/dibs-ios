@@ -23,7 +23,10 @@
     [self setItemsAttributes:responseObject];
     [self setIsLoading:NO];
     [self.refreshControl endRefreshing];
-  } failure:nil];
+  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    [self setIsLoading:NO];
+    [self.refreshControl endRefreshing];
+  }];
 }
 
 -(void)didMoveToParentViewController:(UIViewController *)parent {
