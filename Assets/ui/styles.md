@@ -16,6 +16,7 @@
 # Title Bar
 
 - Height: 88px
+- User avatar: icon_user_button.png, 60x60
 - Logo: titlebar_logo.png
 - Background: #185ba6 90% opacity
 - Text (when applicable)
@@ -36,11 +37,11 @@
 - Text
   - 30px Amaranth Regular
 - Active button
-  - Background: #353535
+  - Background: #4f88c9
   - Color: #ffffff
 - Inactive button
-  - Background: #424242
-  - Color: #747474
+  - Background: #2c68ac
+  - Color: #00336c
 
 # Index List
 
