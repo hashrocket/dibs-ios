@@ -143,4 +143,8 @@
   return [FBSession.activeSession handleOpenURL:url];
 }
 
+-(void)dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 @end

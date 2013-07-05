@@ -118,4 +118,8 @@ static CGFloat kUserItemPadding = 25.f;
                   placeholderImage:[UIImage imageNamed:@"icon_user_menu"]];
 }
 
+-(void)dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 @end
