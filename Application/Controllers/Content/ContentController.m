@@ -1,6 +1,7 @@
 #import "ContentController.h"
 #import "LaunchController.h"
 #import "TabBarController.h"
+#import "NVSlideMenuController.h"
 
 @interface ContentController () {
   LaunchController *_launchController;
@@ -93,6 +94,15 @@
   }
 }
 
+// Publish events notifying system about slide events
+
+-(void)viewWillSlideIn:(BOOL)animated inSlideMenuController:(NVSlideMenuController *)slideMenuController {
+  postNotification(SlideMenuWillSlideIn);
+}
+
+-(void)viewWillSlideOut:(BOOL)animated inSlideMenuController:(NVSlideMenuController *)slideMenuController {
+  postNotification(SlideMenuWillSlideOut);
+}
 
 -(void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self];

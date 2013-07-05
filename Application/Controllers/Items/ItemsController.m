@@ -10,6 +10,8 @@ static CGFloat kPadding = 10;
   UIRefreshControl *_refreshControl;
 }
 -(void)invalidateData;
+-(void)disableCollectionViewInteraction;
+-(void)enableCollectionViewInteraction;
 @end
 
 @implementation ItemsController
@@ -23,6 +25,14 @@ static CGFloat kPadding = 10;
                                              selector:@selector(invalidateData)
                                                  name:UserSessionShouldBeInvalidated
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(enableCollectionViewInteraction)
+                                                 name:SlideMenuWillSlideIn
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(disableCollectionViewInteraction)
+                                                 name:SlideMenuWillSlideOut
+                                               object:nil];
   }
   return self;
 }
@@ -34,6 +44,14 @@ static CGFloat kPadding = 10;
 
 -(void)invalidateData {
   [self setItemsAttributes:[NSArray array]];
+}
+
+-(void)disableCollectionViewInteraction {
+  [self.collectionView setScrollEnabled:NO];
+}
+
+-(void)enableCollectionViewInteraction {
+  [self.collectionView setScrollEnabled:YES];
 }
 
 -(UIRefreshControl*)refreshControl {
@@ -84,6 +102,10 @@ static CGFloat kPadding = 10;
   [super updateViewConstraints];
   id views = @{@"coll": self.collectionView};
   [self.view addUniformConstraintsWithVisualFormat:@"|[coll]|" forSubviews:views];
+}
+
+-(void)dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
