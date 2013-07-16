@@ -42,8 +42,8 @@ to provide a Facebook App ID in order to build the application.
 
 1. `open Dibs.xcworkspace`
 1. In Xcode, select the "Production" scheme and the device to build to (note
-   that in order to build to a device, you will need a valid Apple Developer
-   License).
+   that in order to deploy outside the simulator, you will need a valid Apple
+   Developer License).
 1. Click the "Run" button
 
 # Contributing
