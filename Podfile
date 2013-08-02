@@ -9,3 +9,7 @@ pod 'Funcussion'
 pod 'ISO8601DateFormatter'
 pod 'NSDate+TimeAgo'
 pod 'TTTLocalizedPluralString'
+
+target :integration do
+  pod 'Calabash'
+end

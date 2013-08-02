@@ -74,7 +74,6 @@
 		7CAAA6F417AC4E8800687179 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C4C2A3175E15DE007B65F7 /* UIKit.framework */; };
 		7CAAA6F517AC4E8800687179 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C4C2A5175E15DE007B65F7 /* Foundation.framework */; };
 		7CAAA6F617AC4E8800687179 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C4C2A7175E15DE007B65F7 /* CoreGraphics.framework */; };
-		7CAAA6F717AC4E8800687179 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF3DA454DF944E59ED06C27 /* libPods.a */; };
 		7CAAA6F817AC4E8800687179 /* PXEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C4C2EF175E544E007B65F7 /* PXEngine.framework */; };
 		7CAAA6FA17AC4E8800687179 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C4C2CD175E184C007B65F7 /* Default-568h@2x.png */; };
 		7CAAA6FB17AC4E8800687179 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C4C2CE175E184C007B65F7 /* Default.png */; };
@@ -112,6 +111,7 @@
 		7CD0809F177CCC01007D1F30 /* ItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0809E177CCC01007D1F30 /* ItemsController.m */; };
 		7CD080A3177DF421007D1F30 /* ContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD080A2177DF421007D1F30 /* ContainerController.m */; };
 		999FF7ECA217448D8DC3FD0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF3DA454DF944E59ED06C27 /* libPods.a */; };
+		C8067C0A01F149D9854E80D7 /* libPods-integration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 791B1BE5B15541779CEFC9FB /* libPods-integration.a */; };
 		D755E95D175F886400A23FDE /* UserDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D755E95C175F886400A23FDE /* UserDataStore.m */; };
 		D755E961175FA6CA00A23FDE /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D755E960175FA6CA00A23FDE /* TabBarController.m */; };
 		D7C4C2A4175E15DE007B65F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C4C2A3175E15DE007B65F7 /* UIKit.framework */; };
@@ -140,7 +140,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BA13EE4283E4F60B0583B2C /* Pods-integration.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-integration.xcconfig"; path = "Pods/Pods-integration.xcconfig"; sourceTree = SOURCE_ROOT; };
 		78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		791B1BE5B15541779CEFC9FB /* libPods-integration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-integration.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C0EE60B177A48AE00D2B347 /* MyItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyItemsController.h; sourceTree = "<group>"; };
 		7C0EE60C177A48AE00D2B347 /* MyItemsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyItemsController.m; sourceTree = "<group>"; };
 		7C0EE60F177A521D00D2B347 /* TitleBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleBarView.h; sourceTree = "<group>"; };
@@ -191,7 +193,7 @@
 		7C92F0AA178366A800C79755 /* icon_user_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_user_button@2x.png"; sourceTree = "<group>"; };
 		7C98658F177E35EC00BCE2B0 /* ContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentController.h; sourceTree = "<group>"; };
 		7C986590177E35EC00BCE2B0 /* ContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentController.m; sourceTree = "<group>"; };
-		7CAAA72017AC4E8800687179 /* Dibs copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dibs copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CAAA72017AC4E8800687179 /* integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = integration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAAA72417AC4EE100687179 /* integration-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "integration-Info.plist"; sourceTree = "<group>"; };
 		7CD0809D177CCC01007D1F30 /* ItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsController.h; sourceTree = "<group>"; };
 		7CD0809E177CCC01007D1F30 /* ItemsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsController.m; sourceTree = "<group>"; };
@@ -249,8 +251,8 @@
 				7CAAA6F417AC4E8800687179 /* UIKit.framework in Frameworks */,
 				7CAAA6F517AC4E8800687179 /* Foundation.framework in Frameworks */,
 				7CAAA6F617AC4E8800687179 /* CoreGraphics.framework in Frameworks */,
-				7CAAA6F717AC4E8800687179 /* libPods.a in Frameworks */,
 				7CAAA6F817AC4E8800687179 /* PXEngine.framework in Frameworks */,
+				C8067C0A01F149D9854E80D7 /* libPods-integration.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				7CAAA72417AC4EE100687179 /* integration-Info.plist */,
+				5BA13EE4283E4F60B0583B2C /* Pods-integration.xcconfig */,
 			);
 			path = Integration;
 			sourceTree = "<group>";
@@ -498,7 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C4C2A0175E15DE007B65F7 /* Dibs.app */,
-				7CAAA72017AC4E8800687179 /* Dibs copy.app */,
+				7CAAA72017AC4E8800687179 /* integration.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				D7CDA6E71760C52D000D280A /* QuartzCore.framework */,
 				7C5F43C61773D7CD00350E2D /* SystemConfiguration.framework */,
 				D7C4C2A3175E15DE007B65F7 /* UIKit.framework */,
+				791B1BE5B15541779CEFC9FB /* libPods-integration.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -761,7 +765,7 @@
 			);
 			name = integration;
 			productName = Dibs;
-			productReference = 7CAAA72017AC4E8800687179 /* Dibs copy.app */;
+			productReference = 7CAAA72017AC4E8800687179 /* integration.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D7C4C29F175E15DE007B65F7 /* Dibs */ = {
@@ -934,7 +938,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-integration-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		AF918CFC76234D4FBAE52EFD /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1031,7 +1036,7 @@
 /* Begin XCBuildConfiguration section */
 		7CAAA71D17AC4E8800687179 /* staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */;
+			baseConfigurationReference = 5BA13EE4283E4F60B0583B2C /* Pods-integration.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1047,7 +1052,7 @@
 		};
 		7CAAA71E17AC4E8800687179 /* local */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */;
+			baseConfigurationReference = 5BA13EE4283E4F60B0583B2C /* Pods-integration.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1063,7 +1068,7 @@
 		};
 		7CAAA71F17AC4E8800687179 /* production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */;
+			baseConfigurationReference = 5BA13EE4283E4F60B0583B2C /* Pods-integration.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1127,7 +1132,7 @@
 		};
 		7CAAA72817AC4F5200687179 /* integration */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78E2A6D81FFC403CAAA0A994 /* Pods.xcconfig */;
+			baseConfigurationReference = 5BA13EE4283E4F60B0583B2C /* Pods-integration.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
